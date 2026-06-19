@@ -168,9 +168,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 900; line-height
 .stat { padding: 18px; }
 .stat .num { font-family: var(--font-display); font-weight: 900; font-size: 38px; line-height: 1; }
 .stat .lbl { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 6px; opacity: .8; }
-.stat.orange { background: var(--orange); }
+.stat.orange { background: var(--orange); color: #000; }
+.stat.orange .lbl { opacity: .75; }
 .stat.purple { background: var(--purple); color: #fff; }
-.stat.yellow { background: var(--yellow); }
+.stat.purple .lbl { opacity: .85; }
+.stat.yellow { background: var(--yellow); color: #000; }
+.stat.yellow .lbl { opacity: .75; }
 
 /* ---------- card (module / exam) ---------- */
 .card {
