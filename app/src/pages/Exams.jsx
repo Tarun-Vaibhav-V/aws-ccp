@@ -32,7 +32,7 @@ export default function Exams() {
           <h3>Mixed Mock Exam</h3>
           <div className="card-desc" style={{ color: '#fff', opacity: .9 }}>50 random questions pulled from the entire bank. The closest thing to the real exam.</div>
         </Link>
-        <div className="card" style={{ background: state.wrong.length ? 'var(--yellow)' : 'var(--paper)' }}>
+        <div className="card" style={{ background: state.wrong.length ? 'var(--yellow)' : 'var(--paper)', color: state.wrong.length ? '#000' : 'var(--ink)' }}>
           <div className="card-top"><div className="num-badge">↻</div><span className="tag red">{state.wrong.length}</span></div>
           <h3>Retry My Mistakes</h3>
           <div className="card-desc">Re-attempt every question you’ve gotten wrong. Spaced repetition for weak spots.</div>
@@ -45,10 +45,10 @@ export default function Exams() {
               : <span className="tag ghost">Take an exam to populate this</span>}
           </div>
         </div>
-        <div className="card" style={{ background: 'var(--orange)' }}>
-          <div className="card-top"><div className="num-badge">i</div></div>
+        <div className="card" style={{ background: 'var(--orange)', color: '#000' }}>
+          <div className="card-top"><div className="num-badge" style={{ background: '#000', color: '#fff' }}>i</div></div>
           <h3>Exam facts</h3>
-          <div className="card-desc">65 questions · 90 min · pass ≈ 700/1000 (~70%). Multiple choice + multiple response.</div>
+          <div className="card-desc" style={{ color: '#000', opacity: .75 }}>65 questions · 90 min · pass ≈ 700/1000 (~70%). Multiple choice + multiple response.</div>
         </div>
       </div>
 
