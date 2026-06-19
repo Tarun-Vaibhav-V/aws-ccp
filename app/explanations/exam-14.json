@@ -2,7 +2,7 @@
   "id": "exam-14",
   "number": 14,
   "title": "Practice Exam 14",
-  "total": 50,
+  "total": 49,
   "hasExplanations": true,
   "questions": [
     {
@@ -988,35 +988,6 @@
       "id": "e14-q33"
     },
     {
-      "question": "Which of the following steps should be taken by a customer when conducting penetration testing on AWS?",
-      "options": [
-        {
-          "key": "A",
-          "text": "Conduct penetration testing using Amazon Inspector, and then notify AWS support."
-        },
-        {
-          "key": "B",
-          "text": "Request and wait for approval from the customer's internal security team, and then conduct testing."
-        },
-        {
-          "key": "C",
-          "text": "Notify AWS support, and then conduct testing immediately."
-        },
-        {
-          "key": "D",
-          "text": "Request and wait for approval from AWS support, and then conduct testing."
-        }
-      ],
-      "correct": [
-        "D"
-      ],
-      "explanation": "Of the options given, the customer should obtain authorization from AWS before testing. (Note: under current AWS policy, customers may run penetration tests against eight permitted services without prior approval; tests outside that scope still require AWS authorization.)",
-      "docLink": "https://aws.amazon.com/security/penetration-testing/",
-      "isMulti": false,
-      "domain": "Security & Compliance",
-      "id": "e14-q34"
-    },
-    {
       "question": "Which of the following AWS features enables a user to launch a pre-configured Amazon Elastic Compute Cloud (Amazon EC2) instance?",
       "options": [
         {
@@ -1455,10 +1426,6 @@
         {
           "key": "D",
           "text": "Subnets"
-        },
-        {
-          "key": "E",
-          "text": "Elastic Load Balancing"
         }
       ],
       "correct": [
@@ -1499,6 +1466,15 @@
       "isMulti": false,
       "domain": "Billing & Pricing",
       "id": "e14-q50"
+    },
+    {
+      "id": "e14-q34b",
+      "question": "Which of the following steps should be taken by a customer when conducting penetration testing on AWS?",
+      "correct": [
+        "D"
+      ],
+      "explanation": "Of the options given, the customer should obtain authorization from AWS before testing. (Note: under current AWS policy, customers may run penetration tests against eight permitted services without prior approval; tests outside that scope still require AWS authorization.)",
+      "docLink": "https://aws.amazon.com/security/penetration-testing/"
     }
   ]
 }

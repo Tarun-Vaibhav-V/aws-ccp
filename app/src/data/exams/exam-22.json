@@ -88,7 +88,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "D"
       ],
       "explanation": "",
       "docLink": "",
@@ -382,7 +383,8 @@
         }
       ],
       "correct": [
-        "C"
+        "C",
+        "E"
       ],
       "explanation": "",
       "docLink": "",
@@ -589,7 +591,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "D"
       ],
       "explanation": "",
       "docLink": "",
@@ -622,7 +625,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "",
@@ -738,11 +742,12 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/blogs/startups/large-scale-disaster-recovery-using-aws-regions/",
-      "isMulti": false,
+      "isMulti": true,
       "domain": "Cloud Technology & Services",
       "id": "e22-q25"
     },
@@ -829,7 +834,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "B"
       ],
       "explanation": "",
       "docLink": "",
@@ -1181,7 +1187,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html",
@@ -1388,7 +1395,8 @@
         }
       ],
       "correct": [
-        "C"
+        "C",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/about-aws/whats-new/2016/06/aws-support-enables-tagging-capabilities-for-trusted-advisor/",
@@ -1421,7 +1429,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "E"
       ],
       "explanation": "",
       "docLink": "",

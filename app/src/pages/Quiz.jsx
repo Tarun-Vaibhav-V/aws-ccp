@@ -3,6 +3,7 @@ import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { getExam, buildMixedExam, DOMAINS, buildDomainSet, buildDomainRandom } from '../lib/exams.js'
 import { getState, saveAttempt, recordWrong, clearWrong } from '../lib/storage.js'
 import Explanation from '../components/Explanation.jsx'
+import { buildReportMailto } from '../lib/report.js'
 
 const EXAM_SECONDS = 90 * 60
 const PASS = 70
@@ -167,7 +168,7 @@ export default function Quiz() {
                 )
               })}
             </div>
-            <Explanation q={r.q} sel={r.sel} />
+            <Explanation q={r.q} sel={r.sel} examTitle={exam.title} />
           </div>
         ))}
       </div>
@@ -194,9 +195,12 @@ export default function Quiz() {
       <div className="question-card">
         <div className="row" style={{ justifyContent: 'space-between' }}>
           <span className="qno">Q{idx + 1}{q.isMulti ? ' · choose all that apply' : ''}</span>
-          <button className="tag" style={{ cursor: 'pointer', background: flags[q.id] ? 'var(--yellow)' : 'transparent', color: flags[q.id] ? '#000' : 'var(--ink)' }} onClick={() => setFlags((f) => ({ ...f, [q.id]: !f[q.id] }))}>
-            {flags[q.id] ? '★ Flagged' : '☆ Flag'}
-          </button>
+          <span className="row" style={{ gap: 6 }}>
+            <a className="tag" href={buildReportMailto(q, exam.title)} title="Report an issue with this question" style={{ textDecoration: 'none' }}>⚑ Report</a>
+            <button className="tag" style={{ cursor: 'pointer', background: flags[q.id] ? 'var(--yellow)' : 'transparent', color: flags[q.id] ? '#000' : 'var(--ink)' }} onClick={() => setFlags((f) => ({ ...f, [q.id]: !f[q.id] }))}>
+              {flags[q.id] ? '★ Flagged' : '☆ Flag'}
+            </button>
+          </span>
         </div>
         <div className="qtext">{q.question}</div>
 
@@ -218,7 +222,7 @@ export default function Quiz() {
           })}
         </div>
 
-        {isChecked && <Explanation q={q} sel={picked} />}
+        {isChecked && <Explanation q={q} sel={picked} examTitle={exam.title} />}
       </div>
 
       <div className="quiz-nav">

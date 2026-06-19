@@ -27,6 +27,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = join(__dirname, '..', '..')
 const SRC_DIR = join(REPO_ROOT, 'quiz', 'practice-exam')
 const OUT_DIR = join(__dirname, '..', 'src', 'data', 'exams')
+// Human-written explanation overrides, keyed by question number, per exam.
+const OVERRIDE_DIR = join(__dirname, '..', 'explanations')
 
 // --- lightweight CLF-C02 domain classifier (keyword heuristic) ------------
 const DOMAIN_RULES = [
@@ -50,7 +52,11 @@ function classifyDomain(text) {
 // --- parsing helpers -------------------------------------------------------
 const OPTION_RE = /^\s*[-*]\s*([A-Ea-e])[.)]\s*(.+)$/
 const QSTART_RE = /^(\d+)\.\s+(.+)$/
-const ANSWER_RE = /correct answer\s*[:\-]?\s*([A-Ea-e](?:\s*,\s*[A-Ea-e])*)/i
+// Matches the answer line and captures the answer token only (option letters,
+// optionally separated by commas/spaces, to end of line). Handles "D", "A, C",
+// "A,B", "AB", "BCD", and mixed case "Ac" — while rejecting prose lines that
+// merely contain the words "correct answer".
+const ANSWER_RE = /correct answers?\s*[:\-]?\s*([A-Ea-e][A-Ea-e\s,]*?)\s*$/i
 const EXPL_RE = /explanation\s*[:\-]?\s*(.+)$/i
 const URL_RE = /<?(https?:\/\/[^\s>)]+)>?/
 
@@ -110,8 +116,11 @@ function parseExam(md, examNumber) {
 
     const ans = line.match(ANSWER_RE)
     if (ans && cur.correct.length === 0) {
-      cur.correct = ans[1].split(',').map((x) => x.trim().toUpperCase()).filter(Boolean)
-      continue
+      const letters = ans[1].toUpperCase().match(/[A-E]/g) || []
+      if (letters.length) {
+        cur.correct = [...new Set(letters)]
+        continue
+      }
     }
 
     const expl = line.match(EXPL_RE)
@@ -163,6 +172,57 @@ async function main() {
       console.warn(`  ! ${file}: 0 questions parsed (skipped)`)
       continue
     }
+    // Merge the human-reviewed override layer (explanations.../exam-N.json).
+    // Two supported formats:
+    //   1) Flat map  { "1": "explanation", "2": "..." }  (keyed by question number)
+    //   2) Full exam { ..., questions: [{ id, correct, explanation, ... }] }
+    // The full format may also CORRECT the answer key — reviewed answers win.
+    let overrideCount = 0
+    let answerFixes = 0
+    const ovrPath = join(OVERRIDE_DIR, `exam-${num}.json`)
+    if (existsSync(ovrPath)) {
+      const ovr = JSON.parse(await readFile(ovrPath, 'utf8'))
+      if (Array.isArray(ovr.questions)) {
+        // Match by normalized question TEXT (robust to a missing/reordered
+        // question in the override file, which id/index matching would shift).
+        const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+        const byText = new Map()
+        for (const oq of ovr.questions) {
+          const k = norm(oq.question)
+          if (!byText.has(k)) byText.set(k, oq)
+        }
+        const byId = new Map(ovr.questions.map((q) => [q.id, q]))
+        let unmatched = 0
+        questions.forEach((q) => {
+          const src = byText.get(norm(q.question)) || byId.get(q.id)
+          if (!src) { unmatched++; return }
+          if (typeof src.explanation === 'string' && src.explanation.trim().length > 5) {
+            q.explanation = src.explanation.trim()
+            overrideCount++
+          }
+          if (typeof src.docLink === 'string' && src.docLink.trim()) {
+            q.docLink = src.docLink.trim()
+          }
+          if (Array.isArray(src.correct) && src.correct.length) {
+            const a = [...q.correct].sort().join()
+            const b = [...src.correct].sort().join()
+            if (a !== b) {
+              q.correct = src.correct
+              q.isMulti = src.correct.length > 1 || /choose\s+(two|three|2|3)/i.test(q.question)
+              answerFixes++
+            }
+          }
+        })
+        if (unmatched > 0 || ovr.questions.length !== questions.length) {
+          console.warn(`    ⚠ exam-${num}: override has ${ovr.questions.length} q, source has ${questions.length}; ${unmatched} source question(s) had no override match (using glossary fallback).`)
+        }
+      } else {
+        questions.forEach((q, i) => {
+          const ex = ovr[String(i + 1)]
+          if (ex && typeof ex === 'string') { q.explanation = ex; overrideCount++ }
+        })
+      }
+    }
     const hasExpl = questions.filter((q) => q.explanation || q.docLink).length
     const exam = {
       id: `exam-${num}`,
@@ -183,7 +243,7 @@ async function main() {
       file: outName,
     })
     grandTotal += questions.length
-    console.log(`  ✓ ${file} -> ${outName} (${questions.length} q, ${hasExpl} explained)`)
+    console.log(`  ✓ ${file} -> ${outName} (${questions.length} q, ${hasExpl} explained${overrideCount ? `, ${overrideCount} authored` : ''}${answerFixes ? `, ${answerFixes} answer-fix` : ''})`)
   }
 
   index.sort((a, b) => a.number - b.number)

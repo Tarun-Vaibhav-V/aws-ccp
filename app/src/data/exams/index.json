@@ -5,7 +5,7 @@
       "number": 1,
       "title": "Practice Exam 1",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-1.json"
     },
     {
@@ -13,7 +13,7 @@
       "number": 2,
       "title": "Practice Exam 2",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-2.json"
     },
     {
@@ -21,7 +21,7 @@
       "number": 3,
       "title": "Practice Exam 3",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-3.json"
     },
     {
@@ -29,7 +29,7 @@
       "number": 4,
       "title": "Practice Exam 4",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-4.json"
     },
     {
@@ -37,7 +37,7 @@
       "number": 5,
       "title": "Practice Exam 5",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-5.json"
     },
     {
@@ -45,7 +45,7 @@
       "number": 6,
       "title": "Practice Exam 6",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-6.json"
     },
     {
@@ -53,7 +53,7 @@
       "number": 7,
       "title": "Practice Exam 7",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-7.json"
     },
     {
@@ -61,7 +61,7 @@
       "number": 8,
       "title": "Practice Exam 8",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-8.json"
     },
     {
@@ -69,7 +69,7 @@
       "number": 9,
       "title": "Practice Exam 9",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-9.json"
     },
     {
@@ -77,7 +77,7 @@
       "number": 10,
       "title": "Practice Exam 10",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-10.json"
     },
     {
@@ -85,7 +85,7 @@
       "number": 11,
       "title": "Practice Exam 11",
       "total": 50,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-11.json"
     },
     {
@@ -93,7 +93,7 @@
       "number": 12,
       "title": "Practice Exam 12",
       "total": 42,
-      "hasExplanations": false,
+      "hasExplanations": true,
       "file": "exam-12.json"
     },
     {

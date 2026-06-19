@@ -88,7 +88,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf",
@@ -208,7 +209,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/blogs/apn/amazon-vpc-for-on-premises-network-engineers-part-one/",
@@ -444,7 +446,8 @@
         }
       ],
       "correct": [
-        "C"
+        "C",
+        "D"
       ],
       "explanation": "",
       "docLink": "",
@@ -593,7 +596,8 @@
         }
       ],
       "correct": [
-        "C"
+        "C",
+        "D"
       ],
       "explanation": "",
       "docLink": "",
@@ -858,7 +862,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/lambda/pricing/",
@@ -891,7 +896,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "E"
       ],
       "explanation": "",
       "docLink": "",
@@ -982,7 +988,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/marketplace",
@@ -1131,7 +1138,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://data-flair.training/blogs/aws-advantages/",
@@ -1164,7 +1172,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/tco-calculator/",

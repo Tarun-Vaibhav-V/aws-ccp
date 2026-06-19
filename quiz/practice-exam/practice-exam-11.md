@@ -90,10 +90,10 @@ layout: exam
     </details>
 
 9. Why is it beneficial to use Elastic Load Balancers with applications?
-    - A. They allow for the conversion from Application Load.
-    - B. Balancers to Classic Load Balancers.
+    - A. They allow for the conversion from Application Load Balancers to Classic Load Balancers.
+    - B. They automatically adjust capacity.
     - C. They are capable of handling constant changes in network traffic patterns.
-    - D. They automatically adjust capacity. They are provided at no charge to users.
+    - D. They are provided at no charge to users.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -373,11 +373,11 @@ layout: exam
     </details>
 
 37. Which of the following AWS services can be used to serve large amounts of online video content with the lowest possible latency? (Select TWO)
-    - A. appGateway.
+    - A. Amazon API Gateway.
     - B. Amazon S3.
     - C. Amazon Elastic File System (EFS).
     - D. Amazon Glacier.
-    - E. Amazom CloudFront.
+    - E. Amazon CloudFront.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, E

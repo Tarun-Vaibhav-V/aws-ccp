@@ -3,7 +3,7 @@
   "number": 11,
   "title": "Practice Exam 11",
   "total": 50,
-  "hasExplanations": false,
+  "hasExplanations": true,
   "questions": [
     {
       "question": "How can a company reduce its Total Cost of Ownership (TCO) using AWS?",
@@ -28,7 +28,7 @@
       "correct": [
         "A"
       ],
-      "explanation": "",
+      "explanation": "AWS shifts capital expenditure (CapEx — building data centers upfront) to operational expenditure (OpEx — pay-as-you-go), removing large initial ownership costs.",
       "docLink": "",
       "isMulti": false,
       "domain": "Billing & Pricing",
@@ -62,7 +62,7 @@
         "B",
         "E"
       ],
-      "explanation": "",
+      "explanation": "Classroom Training (live virtual or in-person courses) and Online Tech Talks (live educational webinars with interactive Q&A) are AWS's instructor-led education options.",
       "docLink": "",
       "isMulti": true,
       "domain": "Cloud Technology & Services",
@@ -96,7 +96,7 @@
         "C",
         "E"
       ],
-      "explanation": "",
+      "explanation": "Access to the AWS Management Console is front-facing web traffic. Enforcing Multi-Factor Authentication (MFA) and strict password policies directly protects these logins.",
       "docLink": "",
       "isMulti": true,
       "domain": "Security & Compliance",
@@ -130,7 +130,7 @@
         "C",
         "D"
       ],
-      "explanation": "",
+      "explanation": "Subnets and Security Groups are core networking constructs managed directly within the Amazon VPC interface.",
       "docLink": "",
       "isMulti": true,
       "domain": "Cloud Technology & Services",
@@ -159,7 +159,7 @@
       "correct": [
         "B"
       ],
-      "explanation": "",
+      "explanation": "Under the Shared Responsibility Model, AWS is solely responsible for the physical security of data centers, infrastructure hardware, and the virtualization layer.",
       "docLink": "",
       "isMulti": false,
       "domain": "Security & Compliance",
@@ -193,7 +193,7 @@
         "A",
         "D"
       ],
-      "explanation": "",
+      "explanation": "Consolidated billing groups multiple sub-accounts onto one invoice and treats aggregate usage as a single total, qualifying you faster for volume-tiered pricing discounts.",
       "docLink": "",
       "isMulti": true,
       "domain": "Billing & Pricing",
@@ -227,7 +227,7 @@
         "A",
         "C"
       ],
-      "explanation": "",
+      "explanation": "With managed services (like Amazon RDS), AWS handles routine tasks such as patching the underlying OS/database engine and managing automatic backups.",
       "docLink": "",
       "isMulti": true,
       "domain": "Security & Compliance",
@@ -256,7 +256,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "AWS Regions are independent. To expand into a new Region you simply point your tools/scripts there and start deploying — no new contract is required.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -267,11 +267,11 @@
       "options": [
         {
           "key": "A",
-          "text": "They allow for the conversion from Application Load."
+          "text": "They allow for the conversion from Application Load Balancers to Classic Load Balancers."
         },
         {
           "key": "B",
-          "text": "Balancers to Classic Load Balancers."
+          "text": "They automatically adjust capacity."
         },
         {
           "key": "C",
@@ -279,13 +279,13 @@
         },
         {
           "key": "D",
-          "text": "They automatically adjust capacity. They are provided at no charge to users."
+          "text": "They are provided at no charge to users."
         }
       ],
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "Elastic Load Balancers automatically distribute incoming traffic across multiple targets and are designed to handle constantly changing network traffic patterns.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -314,7 +314,7 @@
       "correct": [
         "B"
       ],
-      "explanation": "",
+      "explanation": "The Business Support Plan is the lowest tier offering 24/7 technical support by phone and chat, plus a target response time of under 1 hour for production system impairments.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -343,7 +343,7 @@
       "correct": [
         "A"
       ],
-      "explanation": "",
+      "explanation": "Amazon S3 provides highly durable storage with millisecond retrieval. Glacier classes require longer retrieval, so standard S3 is the right answer for immediate online access.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -372,7 +372,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "AWS Professional Services is a global team of experts offering paid engagements that help enterprises accelerate their cloud migration journey.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Concepts",
@@ -401,7 +401,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "The Business Support Plan is the minimum tier with 24/7 phone/chat support and a sub-1-hour response target for production issues.",
       "docLink": "",
       "isMulti": false,
       "domain": "Billing & Pricing",
@@ -430,7 +430,7 @@
       "correct": [
         "A"
       ],
-      "explanation": "",
+      "explanation": "AWS Config continuously monitors and records your resource configurations, letting you audit configuration history and evaluate changes for compliance.",
       "docLink": "",
       "isMulti": false,
       "domain": "Security & Compliance",
@@ -464,7 +464,7 @@
         "B",
         "C"
       ],
-      "explanation": "",
+      "explanation": "AWS Trusted Advisor checks your configurations against best-practice pillars and returns actionable findings, including under-utilized resources (cost) and loose permissions (security).",
       "docLink": "",
       "isMulti": true,
       "domain": "Billing & Pricing",
@@ -493,7 +493,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "",
+      "explanation": "Amazon RDS is the managed service for hosting relational SQL engines like MySQL, PostgreSQL, and Oracle.",
       "docLink": "",
       "isMulti": false,
       "domain": "Security & Compliance",
@@ -522,7 +522,7 @@
       "correct": [
         "B"
       ],
-      "explanation": "",
+      "explanation": "Programmatic calls via the AWS CLI require an Access Key ID and a Secret Access Key tied to an IAM user.",
       "docLink": "",
       "isMulti": false,
       "domain": "Security & Compliance",
@@ -551,7 +551,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "Data protection, configuring encryption (at rest and in transit), and managing access keys are the customer's responsibility under the shared model.",
       "docLink": "",
       "isMulti": false,
       "domain": "Security & Compliance",
@@ -580,7 +580,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "",
+      "explanation": "Amazon EFS provides a simple, serverless, elastic NFS file share optimized for Linux workloads.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -614,7 +614,7 @@
         "A",
         "C"
       ],
-      "explanation": "",
+      "explanation": "Interactive sign-ins use a username/password; programmatic actions (SDKs, CLI) use the Access Key ID and Secret Access Key pair.",
       "docLink": "",
       "isMulti": true,
       "domain": "Cloud Technology & Services",
@@ -643,7 +643,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "",
+      "explanation": "Shared controls are handled by both parties. Awareness & Training fits: AWS trains its staff, and you must train your own employees on security.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -672,7 +672,7 @@
       "correct": [
         "B"
       ],
-      "explanation": "",
+      "explanation": "Instance Store volumes live on disks physically attached to the host and are ephemeral — data is lost if the instance stops, hibernates, or terminates.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -701,7 +701,7 @@
       "correct": [
         "A"
       ],
-      "explanation": "",
+      "explanation": "Consolidated billing combines usage across accounts onto one invoice, helping you reach volume discount tiers faster.",
       "docLink": "",
       "isMulti": false,
       "domain": "Billing & Pricing",
@@ -730,7 +730,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "Step Functions (orchestration), DynamoDB (NoSQL), and SNS (pub/sub) are all serverless — no servers to provision or scale.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -759,7 +759,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "Dedicated Hosts allocate isolated physical servers entirely to you — meeting compliance needs for physical isolation and enabling bring-your-own-license (per-socket/per-core).",
       "docLink": "",
       "isMulti": false,
       "domain": "Billing & Pricing",
@@ -793,7 +793,7 @@
         "B",
         "E"
       ],
-      "explanation": "",
+      "explanation": "Granting least-privilege permissions gives users only the access they need, and MFA protects privileged admin accounts from compromise.",
       "docLink": "",
       "isMulti": true,
       "domain": "Security & Compliance",
@@ -822,7 +822,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "",
+      "explanation": "AWS CloudFormation lets you model, provision, and manage your entire environment using declarative code templates (YAML/JSON).",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -851,7 +851,7 @@
       "correct": [
         "B"
       ],
-      "explanation": "",
+      "explanation": "Availability Zones are isolated locations within a Region. Deploying across multiple AZs ensures high availability — if one AZ fails, the others handle traffic.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -880,7 +880,7 @@
       "correct": [
         "A"
       ],
-      "explanation": "",
+      "explanation": "Amazon Aurora is a fully managed MySQL/PostgreSQL-compatible database built for the cloud that scales storage automatically (up to 128 TB).",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -909,7 +909,7 @@
       "correct": [
         "B"
       ],
-      "explanation": "",
+      "explanation": "Loose coupling is a core design principle: components are independent, so one failing doesn't cascade across the whole system.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -938,7 +938,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "The Concierge Support team is exclusive to the Enterprise Support plan — it provides billing and account assistance. Trusted Advisor and support cases are available on other plans too, so they aren't Enterprise-only.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -967,7 +967,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "Moving to the cloud shifts spending from upfront capital expense (CapEx — buying and owning hardware/data centers) to variable operational expense (OpEx — pay-as-you-go for what you use).",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Concepts",
@@ -996,7 +996,7 @@
       "correct": [
         "A"
       ],
-      "explanation": "",
+      "explanation": "Dedicated Hosts give you isolated physical servers, satisfying compliance isolation requirements and supporting bring-your-own-license.",
       "docLink": "",
       "isMulti": false,
       "domain": "Billing & Pricing",
@@ -1025,7 +1025,7 @@
       "correct": [
         "B"
       ],
-      "explanation": "",
+      "explanation": "Amazon S3 Glacier storage classes are designed for low-cost archival of backups that don't need millisecond access.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -1054,7 +1054,7 @@
       "correct": [
         "B"
       ],
-      "explanation": "",
+      "explanation": "The Business Support Plan is the minimum tier with 24/7 phone/chat support and a sub-1-hour response target for production issues.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -1083,7 +1083,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "",
+      "explanation": "Spot Instances use spare EC2 capacity at up to 90% off, but they can be interrupted with a 2-minute warning.",
       "docLink": "",
       "isMulti": false,
       "domain": "Billing & Pricing",
@@ -1094,7 +1094,7 @@
       "options": [
         {
           "key": "A",
-          "text": "appGateway."
+          "text": "Amazon API Gateway."
         },
         {
           "key": "B",
@@ -1110,14 +1110,14 @@
         },
         {
           "key": "E",
-          "text": "Amazom CloudFront."
+          "text": "Amazon CloudFront."
         }
       ],
       "correct": [
         "B",
         "E"
       ],
-      "explanation": "",
+      "explanation": "Amazon S3 stores large raw video assets, while Amazon CloudFront caches and delivers that content from edge locations worldwide for low-latency streaming.",
       "docLink": "",
       "isMulti": true,
       "domain": "Cloud Technology & Services",
@@ -1151,7 +1151,7 @@
         "B",
         "D"
       ],
-      "explanation": "",
+      "explanation": "Edge locations (via Amazon CloudFront) bring content closer to users and cache static data, reducing load on your origin servers.",
       "docLink": "",
       "isMulti": true,
       "domain": "Cloud Technology & Services",
@@ -1180,7 +1180,7 @@
       "correct": [
         "A"
       ],
-      "explanation": "",
+      "explanation": "The AWS TCO Calculator (now part of the AWS Pricing Calculator / Migration Evaluator) models on-premises vs cloud costs side by side to estimate savings before migrating.",
       "docLink": "",
       "isMulti": false,
       "domain": "Billing & Pricing",
@@ -1209,7 +1209,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "The AWS Personal Health Dashboard (now part of the AWS Health Dashboard) alerts you about events affecting your specific resources, unlike the broad Service Health view.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -1238,7 +1238,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "By offloading physical infrastructure management to AWS, a business stops spending on running data centers and can focus on its core activities.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -1267,7 +1267,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "",
+      "explanation": "AWS Basic Support (free) includes only documentation, whitepapers, and the AWS Discussion Forums / re:Post community. Technical Account Managers and direct engineer support require paid plans (Business/Enterprise).",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -1296,7 +1296,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "",
+      "explanation": "If a disaster impacts an entire Region, deploying your application across multiple AWS Regions is the way to achieve geographic disaster recovery.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -1325,7 +1325,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "",
+      "explanation": "AWS secures the underlying storage hardware, but configuring and scheduling backups of your volumes (e.g., EBS snapshots) is your responsibility.",
       "docLink": "",
       "isMulti": false,
       "domain": "Security & Compliance",
@@ -1354,7 +1354,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "",
+      "explanation": "Because Spot Instances are interruptible, they are ideal for non-production, flexible background and batch-processing jobs.",
       "docLink": "",
       "isMulti": false,
       "domain": "Billing & Pricing",
@@ -1388,7 +1388,7 @@
         "A",
         "C"
       ],
-      "explanation": "",
+      "explanation": "Latency (proximity to users) and compliance (data sovereignty laws requiring data to stay in specific countries) are primary factors when choosing a Region.",
       "docLink": "",
       "isMulti": true,
       "domain": "Security & Compliance",
@@ -1417,7 +1417,7 @@
       "correct": [
         "A"
       ],
-      "explanation": "",
+      "explanation": "The AWS Personal Health Dashboard gives personalized alerts about events impacting your specific resources, unlike the broad Service Health Dashboard.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -1446,7 +1446,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "",
+      "explanation": "Multi-site active-active runs traffic across multiple fully functional sites at once, giving near-zero RTO/RPO compared to warm standby or pilot light.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -1475,7 +1475,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "",
+      "explanation": "AWS CodeCommit is a fully managed, secure source-control service that hosts private Git repositories.",
       "docLink": "",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
@@ -1509,7 +1509,7 @@
         "B",
         "D"
       ],
-      "explanation": "",
+      "explanation": "As in Q3, enforcing MFA and strong password policies are the fundamental ways to secure interactive identity logins.",
       "docLink": "",
       "isMulti": true,
       "domain": "Security & Compliance",

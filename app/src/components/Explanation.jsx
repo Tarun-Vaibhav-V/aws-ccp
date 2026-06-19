@@ -1,4 +1,5 @@
 import { annotate } from '../lib/glossary.js'
+import { buildReportMailto, REPORT_LINKEDIN } from '../lib/report.js'
 
 /**
  * Rich explanation block. Rather than fabricating per-question reasoning, it
@@ -10,18 +11,19 @@ import { annotate } from '../lib/glossary.js'
 
 /** Build the "why it's correct" reason from source text and/or the glossary. */
 function whyCorrect(q) {
-  const parts = []
+  // 1) Prefer an authored/source explanation — use it on its own.
   if (q.explanation && q.explanation.replace(/[^a-z]/gi, '').length > 12) {
-    parts.push(q.explanation)
+    return q.explanation
   }
-  const defs = (q.correct || [])
+
+  // 2) Otherwise build a reason from the correct option's concept(s).
+  const parts = (q.correct || [])
     .map((k) => {
       const o = q.options.find((opt) => opt.key === k)
       const note = annotate(o?.text)
       return note ? `${note.term} — ${note.def}` : null
     })
     .filter(Boolean)
-  for (const d of defs) if (!parts.some((p) => p.includes(d))) parts.push(d)
 
   // Guaranteed fallback: every question gets a truthful reason. When no concept
   // is matched, the correct option's own statement is the reason — and we point
@@ -40,7 +42,7 @@ function whyCorrect(q) {
   return parts.join('  ')
 }
 
-export default function Explanation({ q, sel = [] }) {
+export default function Explanation({ q, sel = [], examTitle = '' }) {
   const correct = q.correct || []
   const sameSet =
     sel.length === correct.length && [...sel].sort().join() === [...correct].sort().join()
@@ -102,6 +104,13 @@ export default function Explanation({ q, sel = [] }) {
           AWS reference ↗
         </a>
       )}
+
+      <div className="report-line">
+        ⚑ Spot a mistake in this question?{' '}
+        <a href={buildReportMailto(q, examTitle)}>Report by email</a>{' '}or{' '}
+        <a href={REPORT_LINKEDIN} target="_blank" rel="noreferrer">message on LinkedIn</a>
+        {' '}— please attach a screenshot.
+      </div>
     </div>
   )
 }

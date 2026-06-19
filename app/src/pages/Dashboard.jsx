@@ -24,7 +24,7 @@ export default function Dashboard() {
       <div className="hero">
         <div className="blob" />
         <div className="blob two" />
-        <span className="tag purple">FREE · COMMUNITY · CLF-C02</span>
+        <span className="tag purple">AWS CLOUD CLUB · VITC · CLF-C02</span>
         <h1>Pass the AWS Cloud Practitioner exam.</h1>
         <p>{modules.length} learning modules and {totalQ.toLocaleString()} real practice questions across {exams.length} mock exams — with instant explanations and progress tracking. No login. No paywall.</p>
         <div className="hero-actions">

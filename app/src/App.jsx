@@ -43,7 +43,7 @@ function Sidebar({ open, onClose, theme, setTheme }) {
         <button className="theme-toggle" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
           {theme === 'dark' ? '☀ LIGHT MODE' : '☾ DARK MODE'}
         </button>
-        <div style={{ marginTop: 12 }}>Community study platform.<br />Built for learners, free forever.</div>
+        <div style={{ marginTop: 12 }}>Built by <strong>AWS Cloud Club · VITC</strong><br />Free community study platform.</div>
       </div>
     </aside>
   )
@@ -79,6 +79,10 @@ export default function App() {
           <Route path="/quiz/:id" element={<Quiz />} />
           <Route path="*" element={<Dashboard />} />
         </Routes>
+        <footer className="app-footer">
+          <span>AWS CCP — a free, community study platform.</span>
+          <span className="footer-mark">Built by <strong>AWS Cloud Club · VITC</strong></span>
+        </footer>
       </main>
     </div>
   )

@@ -88,7 +88,8 @@
         }
       ],
       "correct": [
-        "D"
+        "D",
+        "E"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/organizations/",
@@ -208,7 +209,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/directconnect/faqs/",
@@ -241,7 +243,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/compliance/shared-responsibility-model/",
@@ -680,7 +683,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://blog.newrelic.com/engineering/best-cloud-infrastructure-automation-tools/",
@@ -800,7 +804,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html",
@@ -833,11 +838,12 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html",
-      "isMulti": false,
+      "isMulti": true,
       "domain": "Security & Compliance",
       "id": "e21-q28"
     },
@@ -1185,7 +1191,8 @@
         }
       ],
       "correct": [
-        "D"
+        "D",
+        "E"
       ],
       "explanation": "",
       "docLink": "",
@@ -1421,7 +1428,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "D"
       ],
       "explanation": "",
       "docLink": "",
@@ -1454,7 +1462,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "",

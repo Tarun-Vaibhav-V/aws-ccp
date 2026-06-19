@@ -59,7 +59,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://d0.awsstatic.com/whitepapers/overview-of-deployment-options-on-aws.pdf",
@@ -469,7 +470,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/shield/",
@@ -531,7 +533,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "E"
       ],
       "explanation": "",
       "docLink": "",
@@ -593,7 +596,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-increase-availability.html",
@@ -858,7 +862,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "E"
       ],
       "explanation": "",
       "docLink": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html",
@@ -1007,7 +1012,8 @@
         }
       ],
       "correct": [
-        "C"
+        "C",
+        "E"
       ],
       "explanation": "",
       "docLink": "https://wa.aws.amazon.com/wat.pillar.reliability.en.html",
@@ -1040,7 +1046,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/cloudfront/faqs/",
@@ -1247,7 +1254,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html",

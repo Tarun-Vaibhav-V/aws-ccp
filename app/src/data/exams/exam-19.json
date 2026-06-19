@@ -291,7 +291,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf",
@@ -353,7 +354,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "B"
       ],
       "explanation": "",
       "docLink": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html",
@@ -386,7 +388,8 @@
         }
       ],
       "correct": [
-        "C"
+        "C",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/solutions/aws-landing-zone/",
@@ -593,7 +596,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/cloudfront/faqs/",
@@ -655,7 +659,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://subscription.packtpub.com/book/virtualization_and_cloud/9781788293723/3/ch03lvl1sec26/vpc-components",
@@ -717,7 +722,8 @@
         }
       ],
       "correct": [
-        "C"
+        "C",
+        "E"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/blogs/security/guidelines-for-protecting-your-aws-account-while-using-programmatic-access/",
@@ -750,7 +756,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/premiumsupport/technology/trusted-advisor/best-practice-checklist/",
@@ -812,7 +819,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "C"
       ],
       "explanation": "",
       "docLink": "",
@@ -845,7 +853,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/compliance/data-center/controls/",
@@ -907,7 +916,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/directconnect/",
@@ -1172,7 +1182,8 @@
         }
       ],
       "correct": [
-        "C"
+        "C",
+        "E"
       ],
       "explanation": "",
       "docLink": "https://docs.aws.amazon.com/crypto/latest/userguide/awscryp-service-hsm.html",
@@ -1234,7 +1245,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "D"
       ],
       "explanation": "",
       "docLink": "",
@@ -1296,7 +1308,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "E"
       ],
       "explanation": "",
       "docLink": "https://www.whizlabs.com/blog/aws-security-shared-responsibility/",
@@ -1470,7 +1483,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html",

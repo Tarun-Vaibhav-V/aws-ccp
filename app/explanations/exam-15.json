@@ -541,7 +541,7 @@
         "B",
         "D"
       ],
-      "explanation": "Edge locations are primarily used by Amazon CloudFront to cache static content geographically closer to end users, which lowers latency and reduces the load on the origin server.",
+      "explanation": "Edge locations cache duplicate copies of static content closer to users, which improves delivery speeds and dramatically reduces request traffic hitting the origin server.",
       "docLink": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html",
       "isMulti": true,
       "domain": "Cloud Technology & Services",
@@ -917,8 +917,12 @@
       "id": "e15-q30"
     },
     {
-      "question": "Which of the following services falls under the responsibility of the customer to maintain operating system configuration, security patching, and networking? - A. Amazon RDS",
+      "question": "Which of the following services falls under the responsibility of the customer to maintain operating system configuration, security patching, and networking?",
       "options": [
+        {
+          "key": "A",
+          "text": "Amazon RDS"
+        },
         {
           "key": "B",
           "text": "Amazon EC2"

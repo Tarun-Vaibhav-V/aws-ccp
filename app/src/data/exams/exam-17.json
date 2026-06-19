@@ -320,7 +320,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "D"
       ],
       "explanation": "",
       "docLink": "",
@@ -382,7 +383,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "B"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/blogs/apn/the-5-pillars-of-the-aws-well-architected-framework/",
@@ -415,7 +417,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "E"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/premiumsupport/knowledge-center/potential-account-compromise/",
@@ -564,7 +567,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "E"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/premiumsupport/knowledge-center/ec2-ri-basics/",
@@ -684,7 +688,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "B"
       ],
       "explanation": "",
       "docLink": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html",
@@ -746,7 +751,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "D"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/hybrid/",
@@ -900,7 +906,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "B"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/partners/aws-marketplace/",
@@ -962,7 +969,8 @@
         }
       ],
       "correct": [
-        "B"
+        "B",
+        "E"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/compliance/shared-responsibility-model/",
@@ -1169,7 +1177,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "",
@@ -1318,7 +1327,8 @@
         }
       ],
       "correct": [
-        "A"
+        "A",
+        "C"
       ],
       "explanation": "",
       "docLink": "https://aws.amazon.com/cloudfront/",
