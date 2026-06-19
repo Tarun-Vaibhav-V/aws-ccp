@@ -1,10 +1,10 @@
-# Netlify deploy config. Connect this repo, set base directory to "app".
+# Netlify deploy config for monorepo-style layout.
+# No base dir — we cd into app/ explicitly so paths are unambiguous.
 [build]
-  base = "app"
-  command = "npm run build"
-  publish = "dist"
+  command = "cd app && npm install && npm run build"
+  publish = "app/dist"
 
-# SPA fallback (HashRouter doesn't strictly need it, but safe).
+# SPA fallback — required for React Router (BrowserRouter).
 [[redirects]]
   from = "/*"
   to = "/index.html"
