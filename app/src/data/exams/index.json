@@ -1,0 +1,189 @@
+{
+  "exams": [
+    {
+      "id": "exam-1",
+      "number": 1,
+      "title": "Practice Exam 1",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-1.json"
+    },
+    {
+      "id": "exam-2",
+      "number": 2,
+      "title": "Practice Exam 2",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-2.json"
+    },
+    {
+      "id": "exam-3",
+      "number": 3,
+      "title": "Practice Exam 3",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-3.json"
+    },
+    {
+      "id": "exam-4",
+      "number": 4,
+      "title": "Practice Exam 4",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-4.json"
+    },
+    {
+      "id": "exam-5",
+      "number": 5,
+      "title": "Practice Exam 5",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-5.json"
+    },
+    {
+      "id": "exam-6",
+      "number": 6,
+      "title": "Practice Exam 6",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-6.json"
+    },
+    {
+      "id": "exam-7",
+      "number": 7,
+      "title": "Practice Exam 7",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-7.json"
+    },
+    {
+      "id": "exam-8",
+      "number": 8,
+      "title": "Practice Exam 8",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-8.json"
+    },
+    {
+      "id": "exam-9",
+      "number": 9,
+      "title": "Practice Exam 9",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-9.json"
+    },
+    {
+      "id": "exam-10",
+      "number": 10,
+      "title": "Practice Exam 10",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-10.json"
+    },
+    {
+      "id": "exam-11",
+      "number": 11,
+      "title": "Practice Exam 11",
+      "total": 50,
+      "hasExplanations": false,
+      "file": "exam-11.json"
+    },
+    {
+      "id": "exam-12",
+      "number": 12,
+      "title": "Practice Exam 12",
+      "total": 42,
+      "hasExplanations": false,
+      "file": "exam-12.json"
+    },
+    {
+      "id": "exam-13",
+      "number": 13,
+      "title": "Practice Exam 13",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-13.json"
+    },
+    {
+      "id": "exam-14",
+      "number": 14,
+      "title": "Practice Exam 14",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-14.json"
+    },
+    {
+      "id": "exam-15",
+      "number": 15,
+      "title": "Practice Exam 15",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-15.json"
+    },
+    {
+      "id": "exam-16",
+      "number": 16,
+      "title": "Practice Exam 16",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-16.json"
+    },
+    {
+      "id": "exam-17",
+      "number": 17,
+      "title": "Practice Exam 17",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-17.json"
+    },
+    {
+      "id": "exam-18",
+      "number": 18,
+      "title": "Practice Exam 18",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-18.json"
+    },
+    {
+      "id": "exam-19",
+      "number": 19,
+      "title": "Practice Exam 19",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-19.json"
+    },
+    {
+      "id": "exam-20",
+      "number": 20,
+      "title": "Practice Exam 20",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-20.json"
+    },
+    {
+      "id": "exam-21",
+      "number": 21,
+      "title": "Practice Exam 21",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-21.json"
+    },
+    {
+      "id": "exam-22",
+      "number": 22,
+      "title": "Practice Exam 22",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-22.json"
+    },
+    {
+      "id": "exam-23",
+      "number": 23,
+      "title": "Practice Exam 23",
+      "total": 50,
+      "hasExplanations": true,
+      "file": "exam-23.json"
+    }
+  ],
+  "totalQuestions": 1142
+}

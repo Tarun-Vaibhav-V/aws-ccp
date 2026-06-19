@@ -1,0 +1,1549 @@
+{
+  "id": "exam-4",
+  "number": 4,
+  "title": "Practice Exam 4",
+  "total": 50,
+  "hasExplanations": false,
+  "questions": [
+    {
+      "question": "A developer needs to set up an SSL security certificate for a client's eCommerce website in order to use the HTTPS protocol. Which of the following AWS services can be used to deploy the required SSL server certificates? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon Route 53."
+        },
+        {
+          "key": "B",
+          "text": "AWS ACM."
+        },
+        {
+          "key": "C",
+          "text": "AWS Directory Service."
+        },
+        {
+          "key": "D",
+          "text": "AWS Identity & Access Management."
+        },
+        {
+          "key": "E",
+          "text": "AWS Data Pipeline."
+        }
+      ],
+      "correct": [
+        "A",
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q1"
+    },
+    {
+      "question": "Which of the following AWS services scale automatically without your intervention? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon EC2."
+        },
+        {
+          "key": "B",
+          "text": "Amazon S3."
+        },
+        {
+          "key": "C",
+          "text": "AWS Lambda."
+        },
+        {
+          "key": "D",
+          "text": "Amazon EMR."
+        },
+        {
+          "key": "E",
+          "text": "Amazon EBS."
+        }
+      ],
+      "correct": [
+        "B",
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q2"
+    },
+    {
+      "question": "A company is planning to migrate an application from Amazon EC2 to AWS Lambda to use a serverless architecture. Which of the following will be the responsibility of AWS after migration? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Application management."
+        },
+        {
+          "key": "B",
+          "text": "Capacity management."
+        },
+        {
+          "key": "C",
+          "text": "Access control."
+        },
+        {
+          "key": "D",
+          "text": "Operating system maintenance."
+        },
+        {
+          "key": "E",
+          "text": "Data management."
+        }
+      ],
+      "correct": [
+        "B",
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q3"
+    },
+    {
+      "question": "How do ELBs improve the reliability of your application?",
+      "options": [
+        {
+          "key": "A",
+          "text": "By distributing traffic across multiple S3 buckets."
+        },
+        {
+          "key": "B",
+          "text": "By replicating data to multiple availability zones."
+        },
+        {
+          "key": "C",
+          "text": "By creating database Read Replicas."
+        },
+        {
+          "key": "D",
+          "text": "By ensuring that only healthy targets receive traffic."
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q4"
+    },
+    {
+      "question": "A company needs to migrate their website from on-premises to AWS. Security is a major concern for them, so they need to host their website on hardware that is NOT shared with other AWS customers. Which of the following EC2 instance options meets this requirement?",
+      "options": [
+        {
+          "key": "A",
+          "text": "On-demand instances."
+        },
+        {
+          "key": "B",
+          "text": "Spot instances."
+        },
+        {
+          "key": "C",
+          "text": "Dedicated instances."
+        },
+        {
+          "key": "D",
+          "text": "Reserved instances."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e4-q5"
+    },
+    {
+      "question": "A customer is planning to move billions of images and videos to be stored on Amazon S3. The customer has approximately 60 Petabytes of data to move. Which of the following AWS Services is the best choice to transfer the data to AWS?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Snowball."
+        },
+        {
+          "key": "B",
+          "text": "S3 Transfer Acceleration."
+        },
+        {
+          "key": "C",
+          "text": "Snowmobile."
+        },
+        {
+          "key": "D",
+          "text": "Amazon VPC."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q6"
+    },
+    {
+      "question": "A company plans to migrate a large amount of archived data to AWS. The archived data must be maintained for a period of 5 years and must be retrievable within 5 hours of a request. What is the most cost-effective AWS storage service to use?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon S3 Glacier."
+        },
+        {
+          "key": "B",
+          "text": "Amazon EFS."
+        },
+        {
+          "key": "C",
+          "text": "Amazon S3 Standard."
+        },
+        {
+          "key": "D",
+          "text": "Amazon EBS."
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q7"
+    },
+    {
+      "question": "Which AWS Service is used to manage user permissions?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Security Groups."
+        },
+        {
+          "key": "B",
+          "text": "Amazon ECS."
+        },
+        {
+          "key": "C",
+          "text": "AWS IAM."
+        },
+        {
+          "key": "D",
+          "text": "AWS Support."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e4-q8"
+    },
+    {
+      "question": "Which support plan includes AWS Support Concierge Service?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Premium Support."
+        },
+        {
+          "key": "B",
+          "text": "Business Support."
+        },
+        {
+          "key": "C",
+          "text": "Enterprise Support."
+        },
+        {
+          "key": "D",
+          "text": "Standard Support."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q9"
+    },
+    {
+      "question": "A company needs to track resource changes using the API call history. Which AWS service can help the company achieve this goal?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Config."
+        },
+        {
+          "key": "B",
+          "text": "Amazon CloudWatch."
+        },
+        {
+          "key": "C",
+          "text": "AWS CloudTrail."
+        },
+        {
+          "key": "D",
+          "text": "AWS CloudFormation."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q10"
+    },
+    {
+      "question": "What are the benefits of using an AWS-managed service? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Provides complete control over the virtual infrastructure."
+        },
+        {
+          "key": "B",
+          "text": "Allows customers to deliver new solutions faster."
+        },
+        {
+          "key": "C",
+          "text": "Lowers operational complexity."
+        },
+        {
+          "key": "D",
+          "text": "Eliminates the need to encrypt data."
+        },
+        {
+          "key": "E",
+          "text": "Allows developers to control all patching related activities."
+        }
+      ],
+      "correct": [
+        "B",
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Security & Compliance",
+      "id": "e4-q11"
+    },
+    {
+      "question": "Which of the following are use cases for Amazon S3? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hosting static websites."
+        },
+        {
+          "key": "B",
+          "text": "Hosting websites that require sustained high CPU utilization."
+        },
+        {
+          "key": "C",
+          "text": "Cost-effective database and log storage."
+        },
+        {
+          "key": "D",
+          "text": "A media store for the CloudFront service."
+        },
+        {
+          "key": "E",
+          "text": "Processing data streams at any scale."
+        }
+      ],
+      "correct": [
+        "A",
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q12"
+    },
+    {
+      "question": "What is the AWS’ recommendation regarding access keys?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Delete all access keys and use passwords instead."
+        },
+        {
+          "key": "B",
+          "text": "Only share them with trusted people."
+        },
+        {
+          "key": "C",
+          "text": "Rotate them regularly."
+        },
+        {
+          "key": "D",
+          "text": "Save them within your application code."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q13"
+    },
+    {
+      "question": "What is the AWS IAM feature that provides an additional layer of security on top of user-name and password authentication?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Key Pair."
+        },
+        {
+          "key": "B",
+          "text": "Access Keys."
+        },
+        {
+          "key": "C",
+          "text": "SDK."
+        },
+        {
+          "key": "D",
+          "text": "MFA."
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e4-q14"
+    },
+    {
+      "question": "What is the benefit of using an API to access AWS Services?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It improves the performance of AWS resources."
+        },
+        {
+          "key": "B",
+          "text": "It reduces the time needed to provision AWS resources."
+        },
+        {
+          "key": "C",
+          "text": "It reduces the number of developers necessary."
+        },
+        {
+          "key": "D",
+          "text": "It allows for programmatic management of AWS resources."
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q15"
+    },
+    {
+      "question": "A company is planning to migrate a database with high read/write activity to AWS. What is the best storage option to use?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Storage Gateway."
+        },
+        {
+          "key": "B",
+          "text": "Amazon S3."
+        },
+        {
+          "key": "C",
+          "text": "Amazon EBS."
+        },
+        {
+          "key": "D",
+          "text": "Amazon Glacier."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q16"
+    },
+    {
+      "question": "How can AWS customers track and avoid over-spending on underutilized reserved instances?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Customers can add all AWS accounts to an AWS Organization, enable Consolidated Billing, and turn off Reserved Instance sharing."
+        },
+        {
+          "key": "B",
+          "text": "Customers can use Amazon Neptune to track and analyze their usage patterns, detect underutilized reserved instances, and then sell them on the Amazon EC2 Reserved Instance Marketplace."
+        },
+        {
+          "key": "C",
+          "text": "Customers can use the AWS Budgets service to track the reserved instances usage and set up alert notifications when their utilization drops below the threshold that they define."
+        },
+        {
+          "key": "D",
+          "text": "Customers can use Amazon CloudTrail to automatically check for unused reservations and get recommendations to reduce their bill."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e4-q17"
+    },
+    {
+      "question": "What is the AWS service that provides five times the performance of a standard MySQL database?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon Aurora."
+        },
+        {
+          "key": "B",
+          "text": "Amazon Redshift."
+        },
+        {
+          "key": "C",
+          "text": "Amazon DynamoDB."
+        },
+        {
+          "key": "D",
+          "text": "Amazon Neptune."
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q18"
+    },
+    {
+      "question": "What does AWS Service Catalog provide?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It enables customers to quickly find descriptions and use cases for AWS services."
+        },
+        {
+          "key": "B",
+          "text": "It enables customers to explore the different catalogs of AWS services."
+        },
+        {
+          "key": "C",
+          "text": "It simplifies organizing and governing commonly deployed IT services."
+        },
+        {
+          "key": "D",
+          "text": "It allows developers to deploy infrastructure on AWS using familiar programming languages."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q19"
+    },
+    {
+      "question": "For managed services like Amazon DynamoDB, which of the below is AWS responsible for? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Protecting credentials."
+        },
+        {
+          "key": "B",
+          "text": "Logging access activity."
+        },
+        {
+          "key": "C",
+          "text": "Patching the database software."
+        },
+        {
+          "key": "D",
+          "text": "Operating system maintenance."
+        },
+        {
+          "key": "E",
+          "text": "Creating access policies."
+        }
+      ],
+      "correct": [
+        "C",
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q20"
+    },
+    {
+      "question": "Which of the following AWS Services helps with planning application migration to the AWS Cloud?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Snowball Migration Service."
+        },
+        {
+          "key": "B",
+          "text": "AWS Application Discovery Service."
+        },
+        {
+          "key": "C",
+          "text": "AWS DMS."
+        },
+        {
+          "key": "D",
+          "text": "AWS Migration Hub."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q21"
+    },
+    {
+      "question": "A company is trying to analyze the costs applied to their AWS account recently. Which of the following provides them the most granular data about their AWS costs and usage?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon Machine Image."
+        },
+        {
+          "key": "B",
+          "text": "AWS Cost Explorer."
+        },
+        {
+          "key": "C",
+          "text": "AWS Cost & Usage Report."
+        },
+        {
+          "key": "D",
+          "text": "Amazon CloudWatch."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e4-q22"
+    },
+    {
+      "question": "Which statement best describes the concept of an AWS region?",
+      "options": [
+        {
+          "key": "A",
+          "text": "An AWS Region is a geographical location with a collection of Edge locations."
+        },
+        {
+          "key": "B",
+          "text": "An AWS Region is a virtual network dedicated only to a single AWS customer."
+        },
+        {
+          "key": "C",
+          "text": "An AWS Region is a geographical location with a collection of Availability Zones."
+        },
+        {
+          "key": "D",
+          "text": "An AWS Region represents the country where the AWS infrastructure exist."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q23"
+    },
+    {
+      "question": "A company has discovered that multiple S3 buckets were deleted, but it is unclear who deleted the buckets. Which of the following can the company use to determine the identity that deleted the buckets?",
+      "options": [
+        {
+          "key": "A",
+          "text": "SNS logs."
+        },
+        {
+          "key": "B",
+          "text": "SQS logs."
+        },
+        {
+          "key": "C",
+          "text": "CloudWatch Logs."
+        },
+        {
+          "key": "D",
+          "text": "CloudTrail logs."
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q24"
+    },
+    {
+      "question": "Which of the following are factors in determining the appropriate database technology to use for a specific workload? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Availability Zones."
+        },
+        {
+          "key": "B",
+          "text": "Data sovereignty."
+        },
+        {
+          "key": "C",
+          "text": "The number of reads and writes per second."
+        },
+        {
+          "key": "D",
+          "text": "The nature of the queries."
+        },
+        {
+          "key": "E",
+          "text": "Software bugs."
+        }
+      ],
+      "correct": [
+        "C",
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q25"
+    },
+    {
+      "question": "What are the benefits of implementing a tagging strategy for AWS resources? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quickly identify resources that belong to a specific project."
+        },
+        {
+          "key": "B",
+          "text": "Quickly identify software solutions on AWS."
+        },
+        {
+          "key": "C",
+          "text": "Track API calls in your AWS account."
+        },
+        {
+          "key": "D",
+          "text": "Quickly identify deleted resources and their metadata."
+        },
+        {
+          "key": "E",
+          "text": "Track AWS spending across multiple resources."
+        }
+      ],
+      "correct": [
+        "A",
+        "E"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Concepts",
+      "id": "e4-q26"
+    },
+    {
+      "question": "What are AWS shared controls?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Controls that are solely the responsibility of the customer based on the application they are deploying within AWS services."
+        },
+        {
+          "key": "B",
+          "text": "Controls that a customer inherits from AWS."
+        },
+        {
+          "key": "C",
+          "text": "Controls that apply to both the infrastructure layer and customer layers."
+        },
+        {
+          "key": "D",
+          "text": "Controls that the customer and AWS collaborate together upon to secure the infrastructure."
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q27"
+    },
+    {
+      "question": "Which design principles relate to performance efficiency in AWS? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Build multi-region architectures to better serve global customers."
+        },
+        {
+          "key": "B",
+          "text": "Apply security at all layers."
+        },
+        {
+          "key": "C",
+          "text": "Implement strong Identity and Access controls."
+        },
+        {
+          "key": "D",
+          "text": "Use serverless architectures."
+        },
+        {
+          "key": "E",
+          "text": "Enable audit logging."
+        }
+      ],
+      "correct": [
+        "A",
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q28"
+    },
+    {
+      "question": "Which of the below are responsibilities of the customer when using Amazon EC2? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Protecting sensitive data."
+        },
+        {
+          "key": "B",
+          "text": "Patching of the underlying infrastructure."
+        },
+        {
+          "key": "C",
+          "text": "Setup and operation of managed databases."
+        },
+        {
+          "key": "D",
+          "text": "Maintaining consistent hardware components."
+        },
+        {
+          "key": "E",
+          "text": "Installing and configuring third-party software."
+        }
+      ],
+      "correct": [
+        "A",
+        "E"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q29"
+    },
+    {
+      "question": "Why would an organization decide to use AWS over an on-premises data center? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Free commercial software licenses."
+        },
+        {
+          "key": "B",
+          "text": "Free technical support."
+        },
+        {
+          "key": "C",
+          "text": "Elastic resources."
+        },
+        {
+          "key": "D",
+          "text": "On-site visits for auditing."
+        },
+        {
+          "key": "E",
+          "text": "Cost Savings."
+        }
+      ],
+      "correct": [
+        "C",
+        "E"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Billing & Pricing",
+      "id": "e4-q30"
+    },
+    {
+      "question": "Which of the following AWS services can help you perform security analysis and regulatory compliance auditing? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon Inspector."
+        },
+        {
+          "key": "B",
+          "text": "AWS Virtual Private Gateway."
+        },
+        {
+          "key": "C",
+          "text": "AWS Batch."
+        },
+        {
+          "key": "D",
+          "text": "Amazon ECS."
+        },
+        {
+          "key": "E",
+          "text": "AWS Config."
+        }
+      ],
+      "correct": [
+        "A",
+        "E"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Security & Compliance",
+      "id": "e4-q31"
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of Amazon Elastic Compute Cloud (Amazon EC2)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon EC2 is considered a Serverless Web Service."
+        },
+        {
+          "key": "B",
+          "text": "Amazon EC2 eliminates the need to invest in hardware upfront."
+        },
+        {
+          "key": "C",
+          "text": "Amazon EC2 can launch as many or as few virtual servers as needed."
+        },
+        {
+          "key": "D",
+          "text": "Amazon EC2 offers scalable computing."
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q32"
+    },
+    {
+      "question": "What is the AWS Compute service that executes code only when triggered by events?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Lambda."
+        },
+        {
+          "key": "B",
+          "text": "Amazon CloudWatch."
+        },
+        {
+          "key": "C",
+          "text": "AWS Transit Gateway."
+        },
+        {
+          "key": "D",
+          "text": "Amazon EC2."
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q33"
+    },
+    {
+      "question": "Both AWS and traditional IT distributors provide a wide range of virtual servers to meet their customers’ requirements. What is the name of these virtual servers in AWS?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon EBS Snapshots."
+        },
+        {
+          "key": "B",
+          "text": "Amazon VPC."
+        },
+        {
+          "key": "C",
+          "text": "AWS Managed Servers."
+        },
+        {
+          "key": "D",
+          "text": "Amazon EC2 Instances."
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q34"
+    },
+    {
+      "question": "What is the framework created by AWS Professional Services that helps organizations design a road map to successful cloud adoption?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Secrets Manager."
+        },
+        {
+          "key": "B",
+          "text": "AWS WAF."
+        },
+        {
+          "key": "C",
+          "text": "AWS CAF."
+        },
+        {
+          "key": "D",
+          "text": "Amazon EFS."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e4-q35"
+    },
+    {
+      "question": "TYMO Cloud Corp is looking forward to migrating their entire on-premises data center to AWS. What tool can they use to perform a cost-benefit analysis of moving to the AWS Cloud?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Cost Explorer."
+        },
+        {
+          "key": "B",
+          "text": "AWS TCO Calculator."
+        },
+        {
+          "key": "C",
+          "text": "AWS Budgets."
+        },
+        {
+          "key": "D",
+          "text": "AWS Pricing Calculator."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e4-q36"
+    },
+    {
+      "question": "Which of the following activities supports the Operational Excellence pillar of the AWS Well-Architected Framework?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Using AWS Trusted Advisor to find underutilized resources."
+        },
+        {
+          "key": "B",
+          "text": "Using AWS CloudTrail to record user activities."
+        },
+        {
+          "key": "C",
+          "text": "Using AWS CloudFormation to manage infrastructure as code."
+        },
+        {
+          "key": "D",
+          "text": "Deploying an application in multiple Availability Zones."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q37"
+    },
+    {
+      "question": "Why do many startup companies prefer AWS over traditional on-premises solutions? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS allows them to pay later when their business succeed."
+        },
+        {
+          "key": "B",
+          "text": "AWS can build complete data centers faster than any other Cloud provider."
+        },
+        {
+          "key": "C",
+          "text": "Using AWS, they can reduce time-to-market by focusing on business activities rather than on building and managing data centers."
+        },
+        {
+          "key": "D",
+          "text": "AWS removes the need to invest in operational expenditure."
+        },
+        {
+          "key": "E",
+          "text": "Using AWS allows companies to replace large capital expenditure with low variable costs."
+        }
+      ],
+      "correct": [
+        "C",
+        "E"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Billing & Pricing",
+      "id": "e4-q38"
+    },
+    {
+      "question": "What are the benefits of using DynamoDB? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Automatically scales to meet required throughput capacity."
+        },
+        {
+          "key": "B",
+          "text": "Provides resizable instances to match the current demand."
+        },
+        {
+          "key": "C",
+          "text": "Supports both relational and non-relational data models."
+        },
+        {
+          "key": "D",
+          "text": "Offers extremely low (single-digit millisecond) latency."
+        },
+        {
+          "key": "E",
+          "text": "Supports the most popular NoSQL database engines such as CouchDB and MongoDB."
+        }
+      ],
+      "correct": [
+        "A",
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Concepts",
+      "id": "e4-q39"
+    },
+    {
+      "question": "Which of the following can be used to protect data at rest on Amazon S3? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Versioning."
+        },
+        {
+          "key": "B",
+          "text": "Deduplication."
+        },
+        {
+          "key": "C",
+          "text": "Permissions."
+        },
+        {
+          "key": "D",
+          "text": "Decryption."
+        },
+        {
+          "key": "E",
+          "text": "Conversion."
+        }
+      ],
+      "correct": [
+        "A",
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q40"
+    },
+    {
+      "question": "As part of the AWS Migration Acceleration Program (MAP), what does AWS provide to accelerate Enterprise adoption of AWS? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Partners."
+        },
+        {
+          "key": "B",
+          "text": "AWS Artifact."
+        },
+        {
+          "key": "C",
+          "text": "AWS Professional Services."
+        },
+        {
+          "key": "D",
+          "text": "Amazon Athena."
+        },
+        {
+          "key": "E",
+          "text": "Amazon PinPoint."
+        }
+      ],
+      "correct": [
+        "A",
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Security & Compliance",
+      "id": "e4-q41"
+    },
+    {
+      "question": "AWS recommends some practices to help organizations avoid unexpected charges on their bill. Which of the following is NOT one of these practices?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Deleting unused EBS volumes after terminating an EC2instance."
+        },
+        {
+          "key": "B",
+          "text": "Deleting unused AutoScaling launch configuration."
+        },
+        {
+          "key": "C",
+          "text": "Deleting unused Elastic Load Balancers."
+        },
+        {
+          "key": "D",
+          "text": "Releasing unused Elastic IPs after terminating an EC2instance."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q42"
+    },
+    {
+      "question": "What is the AWS tool that can help a company visualize their AWS spending in the last few months?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Cost Explorer."
+        },
+        {
+          "key": "B",
+          "text": "AWS Pricing Calculator."
+        },
+        {
+          "key": "C",
+          "text": "AWS Budgets."
+        },
+        {
+          "key": "D",
+          "text": "AWS Consolidated Billing."
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e4-q43"
+    },
+    {
+      "question": "When running a workload in AWS, the customer is NOT responsible for: (Select TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Running penetration tests."
+        },
+        {
+          "key": "B",
+          "text": "Reserving capacity."
+        },
+        {
+          "key": "C",
+          "text": "Data center operations."
+        },
+        {
+          "key": "D",
+          "text": "Auditing and regulatory compliance."
+        },
+        {
+          "key": "E",
+          "text": "Infrastructure security."
+        }
+      ],
+      "correct": [
+        "C",
+        "E"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Security & Compliance",
+      "id": "e4-q44"
+    },
+    {
+      "question": "Which AWS service can be used to send promotional text messages (SMS) to more than 200 countries worldwide?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon Simple Email Service (Amazon SES)."
+        },
+        {
+          "key": "B",
+          "text": "Amazon Simple Storage Service (Amazon S3)."
+        },
+        {
+          "key": "C",
+          "text": "Amazon Simple Notification Service (Amazon SNS)."
+        },
+        {
+          "key": "D",
+          "text": "Amazon Simple Queue Service (Amazon SQS)."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q45"
+    },
+    {
+      "question": "Which of the following allows you to create new RDS instances? (Choose TWO)",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS CodeDeploy."
+        },
+        {
+          "key": "B",
+          "text": "AWS Quick Starts."
+        },
+        {
+          "key": "C",
+          "text": "AWS CloudFormation."
+        },
+        {
+          "key": "D",
+          "text": "AWS DMS."
+        },
+        {
+          "key": "E",
+          "text": "AWS Management Console."
+        }
+      ],
+      "correct": [
+        "C",
+        "E"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e4-q46"
+    },
+    {
+      "question": "One of the major advantages of using AWS is cost savings. What does AWS provide to reduce the cost of running Amazon EC2 instances?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Low monthly instance maintenance costs."
+        },
+        {
+          "key": "B",
+          "text": "Low-cost instance tagging."
+        },
+        {
+          "key": "C",
+          "text": "Per-second instance billing."
+        },
+        {
+          "key": "D",
+          "text": "Low instance start-up fees."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e4-q47"
+    },
+    {
+      "question": "Which AWS Group assists customers in achieving their desired business outcomes?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Security Team."
+        },
+        {
+          "key": "B",
+          "text": "AWS Professional Services."
+        },
+        {
+          "key": "C",
+          "text": "AWS Trusted Advisor."
+        },
+        {
+          "key": "D",
+          "text": "AWS Concierge Support Team."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e4-q48"
+    },
+    {
+      "question": "Which AWS service or feature is used to manage the keys used to encrypt customer data?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS KMS."
+        },
+        {
+          "key": "B",
+          "text": "AWS Service Control Policies (SCPs)."
+        },
+        {
+          "key": "C",
+          "text": "Multi-Factor Authentication (MFA)."
+        },
+        {
+          "key": "D",
+          "text": "Amazon Macie."
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e4-q49"
+    },
+    {
+      "question": "Which AWS Service allows customers to download AWS SOC & PCI reports?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Well-Architected Tool."
+        },
+        {
+          "key": "B",
+          "text": "AWS Artifact."
+        },
+        {
+          "key": "C",
+          "text": "AWS Glue."
+        },
+        {
+          "key": "D",
+          "text": "Amazon Chime."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e4-q50"
+    }
+  ]
+}

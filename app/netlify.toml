@@ -1,0 +1,11 @@
+# Netlify deploy config. Connect this repo, set base directory to "app".
+[build]
+  base = "app"
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback (HashRouter doesn't strictly need it, but safe).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,1487 @@
+{
+  "id": "exam-16",
+  "number": 16,
+  "title": "Practice Exam 16",
+  "total": 50,
+  "hasExplanations": true,
+  "questions": [
+    {
+      "question": "What will help a company perform a cost benefit analysis of migrating to the AWS Cloud?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cost Explorer"
+        },
+        {
+          "key": "B",
+          "text": "AWS Total Cost of Ownership (TCO) Calculator"
+        },
+        {
+          "key": "C",
+          "text": "AWS Simple Monthly Calculator"
+        },
+        {
+          "key": "D",
+          "text": "AWS Trusted Advisor"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/tco-calculator/",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e16-q1"
+    },
+    {
+      "question": "Which of the following provides the ability to share the cost benefits of Reserved Instances across AWS accounts?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Cost Explorer between AWS accounts"
+        },
+        {
+          "key": "B",
+          "text": "Linked accounts and consolidated billing"
+        },
+        {
+          "key": "C",
+          "text": "Amazon Elastic Compute Cloud (Amazon EC2) Reserved Instance Utilization Report"
+        },
+        {
+          "key": "D",
+          "text": "Amazon EC2 Instance Usage Report between AWS accounts"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/premiumsupport/knowledge-center/ec2-ri-consolidated-billing/",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e16-q2"
+    },
+    {
+      "question": "A company has multiple AWS accounts and wants to simplify and consolidate its billing process. Which AWS service will achieve this?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Cost and Usage Reports"
+        },
+        {
+          "key": "B",
+          "text": "AWS Organizations"
+        },
+        {
+          "key": "C",
+          "text": "AWS Cost Explorer"
+        },
+        {
+          "key": "D",
+          "text": "AWS Budgets"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e16-q3"
+    },
+    {
+      "question": "A company is designing an application hosted in a single AWS Region serving end-users spread across the world. The company wants to provide the end-users low latency access to the application data. Which of the following services will help fulfill this requirement?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon CloudFront"
+        },
+        {
+          "key": "B",
+          "text": "AWS Direct Connect"
+        },
+        {
+          "key": "C",
+          "text": "Amazon Route 53 global DNS"
+        },
+        {
+          "key": "D",
+          "text": "Amazon Simple Storage Service (Amazon S3) transfer acceleration"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q4"
+    },
+    {
+      "question": "Which of the following deployment models enables customers to fully trade their capital IT expenses for operational expenses?",
+      "options": [
+        {
+          "key": "A",
+          "text": "On-premises"
+        },
+        {
+          "key": "B",
+          "text": "Hybrid"
+        },
+        {
+          "key": "C",
+          "text": "Cloud"
+        },
+        {
+          "key": "D",
+          "text": "Platform as a service"
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/what-is-cloud-computing/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q5"
+    },
+    {
+      "question": "How is asset management on AWS easier than asset management in a physical data center?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS provides a Configuration Management Database that users can maintain."
+        },
+        {
+          "key": "B",
+          "text": "AWS performs infrastructure discovery scans on the customer's behalf."
+        },
+        {
+          "key": "C",
+          "text": "Amazon EC2 automatically generates an asset report and places it in the customer's specified Amazon S3 bucket."
+        },
+        {
+          "key": "D",
+          "text": "Users can gather asset metadata reliably with a few API calls."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/compliance/data-center/controls/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q6"
+    },
+    {
+      "question": "What feature of Amazon RDS helps to create globally redundant databases?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Snapshots"
+        },
+        {
+          "key": "B",
+          "text": "Automatic patching and updating"
+        },
+        {
+          "key": "C",
+          "text": "Cross-Region read replicas"
+        },
+        {
+          "key": "D",
+          "text": "Provisioned IOPS"
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.amazonaws.cn/en_us/AmazonRDS/latest/UserGuide/rds-ug.pdf",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q7"
+    },
+    {
+      "question": "Using AWS Identity and Access Management (IAM) to grant access only to the resources needed to perform a task is a concept known as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "restricted access."
+        },
+        {
+          "key": "B",
+          "text": "as-needed access."
+        },
+        {
+          "key": "C",
+          "text": "least privilege access."
+        },
+        {
+          "key": "D",
+          "text": "token access."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e16-q8"
+    },
+    {
+      "question": "Which methods can be used to identify AWS costs by departments? (Choose two.)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Enable multi-factor authentication for the AWS account root user."
+        },
+        {
+          "key": "B",
+          "text": "Create separate accounts for each department."
+        },
+        {
+          "key": "C",
+          "text": "Use Reserved Instances whenever possible."
+        },
+        {
+          "key": "D",
+          "text": "Use tags to associate each instance with a particular department."
+        },
+        {
+          "key": "E",
+          "text": "Pay bills using purchase orders."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/premiumsupport/knowledge-center/tags-billing-cost-center-project/",
+      "isMulti": true,
+      "domain": "Billing & Pricing",
+      "id": "e16-q9"
+    },
+    {
+      "question": "Under the AWS shared responsibility model, customer responsibilities include which one of the following?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Securing the hardware, software, facilities, and networks that run all products and services."
+        },
+        {
+          "key": "B",
+          "text": "Providing certificates, reports, and other documentation directly to AWS customers under NDA."
+        },
+        {
+          "key": "C",
+          "text": "Configuring the operating system, network, and firewall."
+        },
+        {
+          "key": "D",
+          "text": "Obtaining industry certifications and independent third-party attestations."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/compliance/shared-responsibility-model/",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e16-q10"
+    },
+    {
+      "question": "Which managed AWS service provides real-time guidance on AWS security best practices?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS X-Ray"
+        },
+        {
+          "key": "B",
+          "text": "AWS Trusted Advisor"
+        },
+        {
+          "key": "C",
+          "text": "Amazon CloudWatch"
+        },
+        {
+          "key": "D",
+          "text": "AWS Systems Manager"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://www.ibm.com/downloads/cas/2N40X4PQ",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q11"
+    },
+    {
+      "question": "Which feature adds elasticity to Amazon EC2 instances to handle the changing demand for workloads?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Resource groups"
+        },
+        {
+          "key": "B",
+          "text": "Lifecycle policies"
+        },
+        {
+          "key": "C",
+          "text": "Application Load Balancer"
+        },
+        {
+          "key": "D",
+          "text": "Amazon EC2 Auto Scaling"
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q12"
+    },
+    {
+      "question": "Under the AWS shared responsibility model, customers are responsible for which aspects of security in the cloud? (Choose two.)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Visualization management"
+        },
+        {
+          "key": "B",
+          "text": "Hardware management"
+        },
+        {
+          "key": "C",
+          "text": "Encryption management"
+        },
+        {
+          "key": "D",
+          "text": "Facilities management"
+        },
+        {
+          "key": "E",
+          "text": "Firewall management"
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://cloudacademy.com/blog/aws-shared-responsibility-model-security/",
+      "isMulti": true,
+      "domain": "Security & Compliance",
+      "id": "e16-q13"
+    },
+    {
+      "question": "Which AWS hybrid storage service enables on-premises applications to seamlessly use AWS Cloud storage through standard file-storage protocols?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Direct Connect"
+        },
+        {
+          "key": "B",
+          "text": "AWS Snowball"
+        },
+        {
+          "key": "C",
+          "text": "AWS Storage Gateway"
+        },
+        {
+          "key": "D",
+          "text": "AWS Snowball Edge"
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/storagegateway/faqs/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q14"
+    },
+    {
+      "question": "What is a responsibility of AWS in the shared responsibility model?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Updating the network ACLs to block traffic to vulnerable ports."
+        },
+        {
+          "key": "B",
+          "text": "Patching operating systems running on Amazon EC2 instances."
+        },
+        {
+          "key": "C",
+          "text": "Updating the firmware on the underlying EC2 hosts."
+        },
+        {
+          "key": "D",
+          "text": "Updating the security group rules to block traffic to the vulnerable ports."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://cloudacademy.com/blog/aws-shared-responsibility-model-security/",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e16-q15"
+    },
+    {
+      "question": "Which architectural principle is used when deploying an Amazon Relational Database Service (Amazon RDS) instance in Multiple Availability Zone mode?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Implement loose coupling."
+        },
+        {
+          "key": "B",
+          "text": "Design for failure."
+        },
+        {
+          "key": "C",
+          "text": "Automate everything that can be automated."
+        },
+        {
+          "key": "D",
+          "text": "Use services, not servers."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/rds/details/multi-az/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q16"
+    },
+    {
+      "question": "What does it mean to grant least privilege to AWS IAM users?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is granting permissions to a single user only."
+        },
+        {
+          "key": "B",
+          "text": "It is granting permissions using AWS IAM policies only."
+        },
+        {
+          "key": "C",
+          "text": "It is granting AdministratorAccess policy permissions to trustworthy users."
+        },
+        {
+          "key": "D",
+          "text": "It is granting only the permissions required to perform a given task."
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e16-q17"
+    },
+    {
+      "question": "What is a benefit of loose coupling as a principle of cloud architecture design?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It facilitates low-latency request handling."
+        },
+        {
+          "key": "B",
+          "text": "It allows applications to have dependent workflows."
+        },
+        {
+          "key": "C",
+          "text": "It prevents cascading failures between different components."
+        },
+        {
+          "key": "D",
+          "text": "It allows companies to focus on their physical data center operations."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://www.botmetric.com/blog/aws-cloud-architecture-design-principles/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q18"
+    },
+    {
+      "question": "A director has been tasked with investigating hybrid cloud architecture. The company currently accesses AWS over the public internet. Which service will facilitate private hybrid connectivity?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon Virtual Private Cloud (Amazon VPC) NAT Gateway"
+        },
+        {
+          "key": "B",
+          "text": "AWS Direct Connect"
+        },
+        {
+          "key": "C",
+          "text": "Amazon Simple Storage Service (Amazon S3) Transfer Acceleration"
+        },
+        {
+          "key": "D",
+          "text": "AWS Web Application Firewall (AWS WAF)"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/whitepapers/latest/aws-vpc-connectivity-options/",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e16-q19"
+    },
+    {
+      "question": "A company's web application currently has tight dependencies on underlying components, so when one component fails the entire web application fails. Applying which AWS Cloud design principle will address the current design issue?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Implementing elasticity, enabling the application to scale up or scale down as demand changes."
+        },
+        {
+          "key": "B",
+          "text": "Enabling several EC2 instances to run in parallel to achieve better performance."
+        },
+        {
+          "key": "C",
+          "text": "Focusing on decoupling components by isolating them and ensuring individual components can function when other components fail."
+        },
+        {
+          "key": "D",
+          "text": "Doubling EC2 computing resources to increase system fault tolerance."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "",
+      "isMulti": false,
+      "domain": "Cloud Concepts",
+      "id": "e16-q20"
+    },
+    {
+      "question": "How can a customer increase security to AWS account logons? (Choose two.)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Configure AWS Certificate Manager"
+        },
+        {
+          "key": "B",
+          "text": "Enable Multi-Factor Authentication (MFA)"
+        },
+        {
+          "key": "C",
+          "text": "Use Amazon Cognito to manage access"
+        },
+        {
+          "key": "D",
+          "text": "Configure a strong password policy"
+        },
+        {
+          "key": "E",
+          "text": "Enable AWS Organizations"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/blogs/security/guidelines-for-protecting-your-aws-account-while-using-programmatic-access/",
+      "isMulti": true,
+      "domain": "Security & Compliance",
+      "id": "e16-q21"
+    },
+    {
+      "question": "What AWS service would be used to centrally manage AWS access across multiple accounts?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Service Catalog"
+        },
+        {
+          "key": "B",
+          "text": "AWS Config"
+        },
+        {
+          "key": "C",
+          "text": "AWS Trusted Advisor"
+        },
+        {
+          "key": "D",
+          "text": "AWS Organizations"
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/organizations/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q22"
+    },
+    {
+      "question": "Which AWS service can a customer use to set up an alert notification when the account is approaching a particular dollar amount?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Cost and Usage reports"
+        },
+        {
+          "key": "B",
+          "text": "AWS Budgets"
+        },
+        {
+          "key": "C",
+          "text": "AWS Cost Explorer"
+        },
+        {
+          "key": "D",
+          "text": "AWS Trusted Advisor"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e16-q23"
+    },
+    {
+      "question": "What can users access from AWS Artifact?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS security and compliance documents"
+        },
+        {
+          "key": "B",
+          "text": "A download of configuration management details for all AWS resources"
+        },
+        {
+          "key": "C",
+          "text": "Training materials for AWS services"
+        },
+        {
+          "key": "D",
+          "text": "A security assessment of the applications deployed in the AWS Cloud"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/artifact/faq/",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e16-q24"
+    },
+    {
+      "question": "Which is the MINIMUM AWS Support plan that provides designated Technical Account Managers?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Enterprise"
+        },
+        {
+          "key": "B",
+          "text": "Business"
+        },
+        {
+          "key": "C",
+          "text": "Developer"
+        },
+        {
+          "key": "D",
+          "text": "Basic"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/premiumsupport/plans/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q25"
+    },
+    {
+      "question": "Which of the following is an AWS Well-Architected Framework design principle related to reliability?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Deployment to a single Availability Zone"
+        },
+        {
+          "key": "B",
+          "text": "Ability to recover from failure"
+        },
+        {
+          "key": "C",
+          "text": "Design for cost optimization"
+        },
+        {
+          "key": "D",
+          "text": "Perform operations as code"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/blogs/apn/the-5-pillars-of-the-aws-well-architected-framework/",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e16-q26"
+    },
+    {
+      "question": "Which type of AWS storage is ephemeral and is deleted when an instance is stopped or terminated?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon EBS"
+        },
+        {
+          "key": "B",
+          "text": "Amazon EC2 instance store"
+        },
+        {
+          "key": "C",
+          "text": "Amazon EFS"
+        },
+        {
+          "key": "D",
+          "text": "Amazon S3"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q27"
+    },
+    {
+      "question": "What is an advantage of using the AWS Cloud over a traditional on-premises solution?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Users do not have to guess about future capacity needs."
+        },
+        {
+          "key": "B",
+          "text": "Users can utilize existing hardware contracts for purchases."
+        },
+        {
+          "key": "C",
+          "text": "Users can fix costs no matter what their traffic is."
+        },
+        {
+          "key": "D",
+          "text": "Users can avoid audits by using reports from AWS."
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "https://data-flair.training/blogs/aws-advantages/",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e16-q28"
+    },
+    {
+      "question": "Which of the following is an AWS-managed compute service?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon SWF"
+        },
+        {
+          "key": "B",
+          "text": "Amazon EC2"
+        },
+        {
+          "key": "C",
+          "text": "AWS Lambda"
+        },
+        {
+          "key": "D",
+          "text": "Amazon Aurora"
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q29"
+    },
+    {
+      "question": "Which of the following is an important architectural principle when designing cloud applications?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Store data and backups in the same region."
+        },
+        {
+          "key": "B",
+          "text": "Design tightly coupled system components."
+        },
+        {
+          "key": "C",
+          "text": "Avoid multi-threading."
+        },
+        {
+          "key": "D",
+          "text": "Design for failure"
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/blogs/apn/the-5-pillars-of-the-aws-well-architected-framework/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q30"
+    },
+    {
+      "question": "Which mechanism allows developers to access AWS services from application code?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Software Development Kit"
+        },
+        {
+          "key": "B",
+          "text": "AWS Management Console"
+        },
+        {
+          "key": "C",
+          "text": "AWS CodePipeline"
+        },
+        {
+          "key": "D",
+          "text": "AWS Config"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/tools/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q31"
+    },
+    {
+      "question": "Which Amazon EC2 pricing model is the MOST cost efficient for an uninterruptible workload that runs once a year for 24 hours?",
+      "options": [
+        {
+          "key": "A",
+          "text": "On-Demand Instances"
+        },
+        {
+          "key": "B",
+          "text": "Reserved Instances"
+        },
+        {
+          "key": "C",
+          "text": "Spot Instances"
+        },
+        {
+          "key": "D",
+          "text": "Dedicated Instances"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/ec2/pricing/",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e16-q32"
+    },
+    {
+      "question": "Which of the following services is a MySQL-compatible database that automatically grows storage as needed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon Elastic Compute Cloud (Amazon EC2)"
+        },
+        {
+          "key": "B",
+          "text": "Amazon Relational Database Service (Amazon RDS) for MySQL"
+        },
+        {
+          "key": "C",
+          "text": "Amazon Lightsail"
+        },
+        {
+          "key": "D",
+          "text": "Amazon Aurora"
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/rds/aurora/mysql-features/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q33"
+    },
+    {
+      "question": "Which Amazon Virtual Private Cloud (Amazon VPC) feature enables users to connect two VPCs together?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon VPC endpoints"
+        },
+        {
+          "key": "B",
+          "text": "Amazon Elastic Compute Cloud (Amazon EC2) ClassicLink"
+        },
+        {
+          "key": "C",
+          "text": "Amazon VPC peering"
+        },
+        {
+          "key": "D",
+          "text": "AWS Direct Connect"
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q34"
+    },
+    {
+      "question": "Which service's PRIMARY purpose is software version control?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon CodeStar"
+        },
+        {
+          "key": "B",
+          "text": "AWS Command Line Interface (AWS CLI)"
+        },
+        {
+          "key": "C",
+          "text": "Amazon Cognito"
+        },
+        {
+          "key": "D",
+          "text": "AWS CodeCommit"
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q35"
+    },
+    {
+      "question": "A company is considering migrating its applications to AWS. The company wants to compare the cost of running the workload on-premises to running the equivalent workload on the AWS platform. Which tool can be used to perform this comparison?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Simple Monthly Calculator"
+        },
+        {
+          "key": "B",
+          "text": "AWS Total Cost of Ownership (TCO) Calculator"
+        },
+        {
+          "key": "C",
+          "text": "AWS Billing and Cost Management console"
+        },
+        {
+          "key": "D",
+          "text": "Cost Explorer"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://awstcocalculator.com",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e16-q36"
+    },
+    {
+      "question": "Which AWS service provides a secure, fast, and cost-effective way to migrate or transport exabyte-scale datasets into AWS?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Batch"
+        },
+        {
+          "key": "B",
+          "text": "AWS Snowball"
+        },
+        {
+          "key": "C",
+          "text": "AWS Migration Hub"
+        },
+        {
+          "key": "D",
+          "text": "AWS Snowmobile"
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/about-aws/whats-new/2016/11/move-exabyte-scale-data-sets-with",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e16-q37"
+    },
+    {
+      "question": "Which of the following BEST describe the AWS pricing model? (Choose two.)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fixed-term"
+        },
+        {
+          "key": "B",
+          "text": "Pay-as-you-go"
+        },
+        {
+          "key": "C",
+          "text": "Colocation"
+        },
+        {
+          "key": "D",
+          "text": "Planned"
+        },
+        {
+          "key": "E",
+          "text": "Variable cost"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf",
+      "isMulti": true,
+      "domain": "Billing & Pricing",
+      "id": "e16-q38"
+    },
+    {
+      "question": "Which load balancer types are available with Elastic Load Balancing (ELB)? (Choose two.)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Public load balancers with AWS Application Auto Scaling capabilities"
+        },
+        {
+          "key": "B",
+          "text": "F5 Big-IP and Citrix NetScaler load balancers"
+        },
+        {
+          "key": "C",
+          "text": "Classic Load Balancers"
+        },
+        {
+          "key": "D",
+          "text": "Cross-zone load balancers with public and private IPs"
+        },
+        {
+          "key": "E",
+          "text": "Application Load Balancers"
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/load-balancer-types.html",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q39"
+    },
+    {
+      "question": "Why should a company choose AWS instead of a traditional data center?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS provides users with full control over the underlying resources."
+        },
+        {
+          "key": "B",
+          "text": "AWS does not require long-term contracts and provides a pay-as-you-go model."
+        },
+        {
+          "key": "C",
+          "text": "AWS offers edge locations in every country, supporting global reach."
+        },
+        {
+          "key": "D",
+          "text": "AWS has no limits on the number of resources that can be created."
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/pricing/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q40"
+    },
+    {
+      "question": "Which solution provides the FASTEST application response times to frequently accessed data to users in multiple AWS Regions?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS CloudTrail across multiple Availability Zones"
+        },
+        {
+          "key": "B",
+          "text": "Amazon CloudFront to edge locations"
+        },
+        {
+          "key": "C",
+          "text": "AWS CloudFormation in multiple regions"
+        },
+        {
+          "key": "D",
+          "text": "A virtual private gateway over AWS Direct Connect"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/getting-started/tutorials/deliver-content-faster/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q41"
+    },
+    {
+      "question": "Which AWS service provides a self-service portal for on-demand access to AWS compliance reports?",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Config"
+        },
+        {
+          "key": "B",
+          "text": "AWS Certificate Manager"
+        },
+        {
+          "key": "C",
+          "text": "Amazon Inspector"
+        },
+        {
+          "key": "D",
+          "text": "AWS Artifact"
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/artifact/",
+      "isMulti": false,
+      "domain": "Security & Compliance",
+      "id": "e16-q42"
+    },
+    {
+      "question": "Which of the following AWS services can be used to run a self-managed database?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amazon Route 53"
+        },
+        {
+          "key": "B",
+          "text": "AWS X-Ray"
+        },
+        {
+          "key": "C",
+          "text": "AWS Snowmobile"
+        },
+        {
+          "key": "D",
+          "text": "Amazon Elastic Compute Cloud (Amazon EC2)"
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "https://severalnines.com/news/aws-users-prefer-self-managed-databases",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q43"
+    },
+    {
+      "question": "What exclusive benefit is provided to users with Enterprise Support?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Access to a Technical Project Manager"
+        },
+        {
+          "key": "B",
+          "text": "Access to a Technical Account Manager"
+        },
+        {
+          "key": "C",
+          "text": "Access to a Cloud Support Engineer"
+        },
+        {
+          "key": "D",
+          "text": "Access to a Solutions Architect"
+        }
+      ],
+      "correct": [
+        "B"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/premiumsupport/plans/enterprise/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q44"
+    },
+    {
+      "question": "How can a user protect against AWS service disruptions if a natural disaster affects an entire geographic area?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Deploy applications across multiple Availability Zones within an AWS Region."
+        },
+        {
+          "key": "B",
+          "text": "Use a hybrid cloud computing deployment model within the geographic area."
+        },
+        {
+          "key": "C",
+          "text": "Deploy applications across multiple AWS Regions."
+        },
+        {
+          "key": "D",
+          "text": "Store application artifacts using AWS Artifact and replicate them across multiple AWS Regions."
+        }
+      ],
+      "correct": [
+        "C"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/s3/faqs/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q45"
+    },
+    {
+      "question": "How does AWS MOST effectively reduce computing costs for a growing start-up company?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It provides on-demand resources for peak usage."
+        },
+        {
+          "key": "B",
+          "text": "It automates the provisioning of individual developer environments."
+        },
+        {
+          "key": "C",
+          "text": "It automates customer relationship management."
+        },
+        {
+          "key": "D",
+          "text": "It implements a fixed monthly computing budget."
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/startups/lean/",
+      "isMulti": false,
+      "domain": "Billing & Pricing",
+      "id": "e16-q46"
+    },
+    {
+      "question": "A startup is working on a new application that needs to go to market quickly. The application requirements may need to be adjusted in the near future. Which of the following is a characteristic of the AWS Cloud that would meet this specific need?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Elasticity"
+        },
+        {
+          "key": "B",
+          "text": "Reliability"
+        },
+        {
+          "key": "C",
+          "text": "Performance"
+        },
+        {
+          "key": "D",
+          "text": "Agility"
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "http://www.agilenutshell.com",
+      "isMulti": false,
+      "domain": "Cloud Concepts",
+      "id": "e16-q47"
+    },
+    {
+      "question": "Which AWS Support plan provides a full set of AWS Trusted Advisor checks?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Business and Developer Support"
+        },
+        {
+          "key": "B",
+          "text": "Business and Basic Support"
+        },
+        {
+          "key": "C",
+          "text": "Enterprise and Developer Support"
+        },
+        {
+          "key": "D",
+          "text": "Enterprise and Business Support"
+        }
+      ],
+      "correct": [
+        "D"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/premiumsupport/plans/",
+      "isMulti": false,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q48"
+    },
+    {
+      "question": "Which of the following services have Distributed Denial of Service (DDoS) mitigation features? (Choose two.)",
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS WAF"
+        },
+        {
+          "key": "B",
+          "text": "Amazon DynamoDB"
+        },
+        {
+          "key": "C",
+          "text": "Amazon EC2"
+        },
+        {
+          "key": "D",
+          "text": "Amazon CloudFront"
+        },
+        {
+          "key": "E",
+          "text": "Amazon Inspector"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/shield/",
+      "isMulti": true,
+      "domain": "Cloud Technology & Services",
+      "id": "e16-q49"
+    },
+    {
+      "question": "When building a cloud Total Cost of Ownership (TCO) model, which cost elements should be considered for workloads running on AWS? (Choose three.)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Compute costs"
+        },
+        {
+          "key": "B",
+          "text": "Facilities costs"
+        },
+        {
+          "key": "C",
+          "text": "Storage costs"
+        },
+        {
+          "key": "D",
+          "text": "Data transfer costs"
+        },
+        {
+          "key": "E",
+          "text": "Network infrastructure costs"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "explanation": "",
+      "docLink": "https://aws.amazon.com/blogs/aws/the-new-aws-tco-calculator/",
+      "isMulti": true,
+      "domain": "Billing & Pricing",
+      "id": "e16-q50"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "aws-ccp-learn",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build:exams": "node scripts/parse-exams.mjs",
+    "predev": "npm run build:exams",
+    "dev": "vite",
+    "prebuild": "npm run build:exams",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.8"
+  }
+}
