@@ -159,7 +159,7 @@ export default function Login() {
           <input className="dojo-input" type="email" placeholder="you@email.com" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" required />
           <div className="dojo-input pw">
             <input type={showPw ? 'text' : 'password'} placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete={mode === 'signup' ? 'new-password' : 'current-password'} required minLength={6} />
-            <button type="button" onClick={() => setShowPw((s) => !s)} aria-label="toggle password">{showPw ? '🙈' : '👁'}</button>
+            <button type="button" onClick={() => setShowPw((s) => !s)} aria-label="toggle password" style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.05em' }}>{showPw ? 'Hide' : 'Show'}</button>
           </div>
           <div className="dojo-actions">
             <button className="btn primary" type="submit" disabled={working}>

@@ -25,12 +25,32 @@ function AccountChip() {
     return (
       <div className="account-chip">
         <div className="acc-email" title={name}>● {name}</div>
-        <button className="theme-toggle" onClick={() => auth.signOut()}>⎋ SIGN OUT</button>
+        <button className="theme-toggle" onClick={() => auth.signOut()}>Sign out</button>
       </div>
     )
   }
   return (
-    <Link className="theme-toggle signin-cta" to="/login">⚔ SIGN IN / SYNC</Link>
+    <Link className="theme-toggle signin-cta" to="/login">Sign in / Sync</Link>
+  )
+}
+
+function TopBar() {
+  const auth = useAuth()
+  if (!auth?.isCloudEnabled) return null
+  return (
+    <div className="topbar">
+      {auth.user ? (
+        <>
+          <span className="tb-user" title={auth.user.email}>● {auth.user.user_metadata?.full_name || auth.user.email}</span>
+          <button className="btn sm" onClick={() => auth.signOut()}>Sign out</button>
+        </>
+      ) : (
+        <>
+          <Link className="btn sm" to="/login">Log in</Link>
+          <Link className="btn primary sm" to="/login">Sign up</Link>
+        </>
+      )}
+    </div>
   )
 }
 
@@ -61,7 +81,7 @@ function Sidebar({ open, onClose, theme, setTheme }) {
       <div className="sidebar-foot">
         <AccountChip />
         <button className="theme-toggle" style={{ marginTop: 8 }} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-          {theme === 'dark' ? '☀ LIGHT MODE' : '☾ DARK MODE'}
+          {theme === 'dark' ? 'Light mode' : 'Dark mode'}
         </button>
         <div style={{ marginTop: 12 }}>Built by <strong>AWS Student Builder Group · VITC</strong><br />Free community study platform.</div>
       </div>
@@ -99,6 +119,7 @@ export default function App() {
       <button className="btn dark sm menu-btn" onClick={() => setMenuOpen((o) => !o)}>☰ Menu</button>
       <Sidebar open={menuOpen} onClose={() => setMenuOpen(false)} theme={theme} setTheme={setTheme} />
       <main className="main">
+        <TopBar />
         <div key={progressVer}>
           <Routes>
             <Route path="/" element={<Dashboard />} />

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { getExam, buildMixedExam, DOMAINS, buildDomainSet, buildDomainRandom } from '../lib/exams.js'
-import { getState, saveAttempt, recordWrong, clearWrong } from '../lib/storage.js'
+import { getState, saveAttempt, recordWrong, clearWrong, recordVisit } from '../lib/storage.js'
 import Explanation from '../components/Explanation.jsx'
 import { buildReportMailto } from '../lib/report.js'
 
@@ -45,6 +45,11 @@ export default function Quiz() {
   const [timeLeft, setTimeLeft] = useState(EXAM_SECONDS)
   const [result, setResult] = useState(null)
   const timerRef = useRef(null)
+
+  // record this test in "Jump back in" history
+  useEffect(() => {
+    if (exam) recordVisit({ type: 'exam', id, title: exam.title })
+  }, [exam, id])
 
   // timer for exam mode
   useEffect(() => {
@@ -148,7 +153,7 @@ export default function Quiz() {
           </div>
           <div className="row" style={{ marginTop: 18 }}>
             <Link className="btn" to="/exams">← All tests</Link>
-            <button className="btn dark" onClick={() => { setPhase('intro'); setIdx(0); setAnswers({}); setChecked({}); setFlags({}); setTimeLeft(EXAM_SECONDS); setResult(null) }}>↻ Retake</button>
+            <button className="btn dark" onClick={() => { setPhase('intro'); setIdx(0); setAnswers({}); setChecked({}); setFlags({}); setTimeLeft(EXAM_SECONDS); setResult(null) }}>Retake</button>
           </div>
         </div>
 
@@ -199,9 +204,9 @@ export default function Quiz() {
         <div className="row" style={{ justifyContent: 'space-between' }}>
           <span className="qno">Q{idx + 1}{q.isMulti ? ` · select ${q.correct.length}` : ''}</span>
           <span className="row" style={{ gap: 6 }}>
-            <a className="tag" href={buildReportMailto(q, exam.title)} title="Report an issue with this question" style={{ textDecoration: 'none' }}>⚑ Report</a>
+            <a className="tag" href={buildReportMailto(q, exam.title)} title="Report an issue with this question" style={{ textDecoration: 'none' }}>Report</a>
             <button className="tag" style={{ cursor: 'pointer', background: flags[q.id] ? 'var(--yellow)' : 'transparent', color: flags[q.id] ? '#000' : 'var(--ink)' }} onClick={() => setFlags((f) => ({ ...f, [q.id]: !f[q.id] }))}>
-              {flags[q.id] ? '★ Flagged' : '☆ Flag'}
+              {flags[q.id] ? 'Flagged' : 'Flag'}
             </button>
           </span>
         </div>

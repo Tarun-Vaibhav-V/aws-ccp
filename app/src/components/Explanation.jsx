@@ -69,12 +69,12 @@ export default function Explanation({ q, sel = [], examTitle = '' }) {
 
       {q.docLink && (
         <a href={q.docLink} target="_blank" rel="noreferrer" style={{ display: 'inline-block', marginTop: 8 }}>
-          AWS reference ↗
+          AWS reference
         </a>
       )}
 
       <div className="report-line">
-        ⚑ Spot a mistake in this question?{' '}
+        Spot a mistake in this question?{' '}
         <a href={buildReportMailto(q, examTitle)}>Report by email</a>{' '}or{' '}
         <a href={REPORT_LINKEDIN} target="_blank" rel="noreferrer">message on LinkedIn</a>
         {' '}— please attach a screenshot.

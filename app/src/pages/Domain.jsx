@@ -23,8 +23,8 @@ export default function Domain() {
       <div className="grid cols-3" style={{ marginBottom: 28 }}>
         <Link to={`/quiz/domain-${slug}-random`} className="card" style={{ background: 'var(--purple)', color: '#fff' }}>
           <div className="card-top">
-            <div className="num-badge" style={{ background: '#fff', color: '#000' }}>⤮</div>
-            <span className="tag">{Math.min(d.chunk, total)} Q</span>
+            <div className="num-badge" style={{ background: '#fff', color: '#000' }}>{Math.min(d.chunk, total)}</div>
+            <span className="tag">Random</span>
           </div>
           <h3>Randomized drill</h3>
           <div className="card-desc" style={{ color: '#fff', opacity: .9 }}>A fresh random {Math.min(d.chunk, total)} pulled from all {total} {d.name} questions every time.</div>

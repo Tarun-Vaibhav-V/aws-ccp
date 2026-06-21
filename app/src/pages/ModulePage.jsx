@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getModule, modules } from '../data/modules.js'
-import { isModuleDone, toggleModuleDone } from '../lib/storage.js'
+import { isModuleDone, toggleModuleDone, recordVisit } from '../lib/storage.js'
 
 function Section({ s }) {
   switch (s.type) {
@@ -24,6 +24,10 @@ export default function ModulePage() {
   const { id } = useParams()
   const m = getModule(id)
   const [done, setDone] = useState(() => (m ? isModuleDone(m.id) : false))
+
+  useEffect(() => {
+    if (m) recordVisit({ type: 'module', id: m.id, title: m.title })
+  }, [m])
 
   if (!m) return <div className="empty">Module not found. <Link to="/modules">Back to modules</Link></div>
 

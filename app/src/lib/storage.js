@@ -45,7 +45,7 @@ function write(data) {
   pushCloud()
 }
 
-const defaults = () => ({ attempts: [], modulesDone: [], bookmarks: [], wrong: [] })
+const defaults = () => ({ attempts: [], modulesDone: [], bookmarks: [], wrong: [], recents: [] })
 
 export function getState() {
   return { ...defaults(), ...read() }
@@ -193,6 +193,23 @@ export function clearAllWrong() {
   s.wrong = []
   write(s)
   return s
+}
+
+/** Record that the user opened a module or test, for "Jump back in". */
+export function recordVisit(item) {
+  if (!item || !item.id) return
+  const s = getState()
+  const recents = [
+    { type: item.type, id: item.id, title: item.title, at: Date.now() },
+    ...(s.recents || []).filter((r) => !(r.type === item.type && r.id === item.id)),
+  ].slice(0, 12)
+  s.recents = recents
+  write(s)
+}
+
+export function getRecents(n) {
+  const r = getState().recents || []
+  return n ? r.slice(0, n) : r
 }
 
 export function streakDays() {

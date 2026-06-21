@@ -2,20 +2,15 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getExamSummaries, getTotalQuestions, getDomainStats, DOMAINS } from '../lib/exams.js'
 import { getState, bestScore, getAttempts, clearAllWrong } from '../lib/storage.js'
+import ConfirmDialog from '../components/ConfirmDialog.jsx'
 
 export default function Exams() {
   const exams = getExamSummaries()
   const totalQ = getTotalQuestions()
   const [, force] = useState(0)
+  const [confirmReset, setConfirmReset] = useState(false)
   const state = getState()
   const domainCounts = getDomainStats()
-
-  function resetMistakes() {
-    if (window.confirm(`Reset all ${state.wrong.length} saved mistakes? This can’t be undone.`)) {
-      clearAllWrong()
-      force((n) => n + 1)
-    }
-  }
 
   return (
     <div>
@@ -28,19 +23,19 @@ export default function Exams() {
       {/* Special modes */}
       <div className="grid cols-3" style={{ marginBottom: 28 }}>
         <Link to="/quiz/mixed" className="card" style={{ background: 'var(--purple)', color: '#fff' }}>
-          <div className="card-top"><div className="num-badge" style={{ background: '#fff', color: '#000' }}>★</div><span className="tag">50 Q</span></div>
+          <div className="card-top"><div className="num-badge" style={{ background: '#fff', color: '#000' }}>50</div><span className="tag">Random</span></div>
           <h3>Mixed Mock Exam</h3>
           <div className="card-desc" style={{ color: '#fff', opacity: .9 }}>50 random questions pulled from the entire bank. The closest thing to the real exam.</div>
         </Link>
         <div className="card" style={{ background: state.wrong.length ? 'var(--yellow)' : 'var(--paper)', color: state.wrong.length ? '#000' : 'var(--ink)' }}>
-          <div className="card-top"><div className="num-badge">↻</div><span className="tag red">{state.wrong.length}</span></div>
+          <div className="card-top"><div className="num-badge">{state.wrong.length}</div><span className="tag red">to fix</span></div>
           <h3>Retry My Mistakes</h3>
           <div className="card-desc">Re-attempt every question you’ve gotten wrong. Spaced repetition for weak spots.</div>
           <div className="card-foot">
             {state.wrong.length
               ? <>
                   <Link to="/quiz/retry" className="btn dark sm">Start retry</Link>
-                  <button onClick={resetMistakes} className="btn sm">Reset</button>
+                  <button onClick={() => setConfirmReset(true)} className="btn sm">Reset</button>
                 </>
               : <span className="tag ghost">Take an exam to populate this</span>}
           </div>
@@ -96,6 +91,16 @@ export default function Exams() {
           )
         })}
       </div>
+
+      <ConfirmDialog
+        open={confirmReset}
+        danger
+        title="Reset saved mistakes?"
+        message={`This will permanently remove all ${state.wrong.length} saved mistakes. This can’t be undone.`}
+        confirmLabel="Reset"
+        onConfirm={() => { clearAllWrong(); force((n) => n + 1); setConfirmReset(false) }}
+        onCancel={() => setConfirmReset(false)}
+      />
     </div>
   )
 }
