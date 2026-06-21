@@ -1013,9 +1013,9 @@
         }
       ],
       "correct": [
-        "B"
+        "A"
       ],
-      "explanation": "",
+      "explanation": "Amazon RDS is a managed service, so AWS (the RDS product team) patches the underlying guest operating system and database engine. With RDS the customer does NOT patch the OS — a key difference from running a database yourself on Amazon EC2.",
       "docLink": "https://aws.amazon.com/compliance/shared-responsibility-model/",
       "isMulti": false,
       "domain": "Cloud Technology & Services",

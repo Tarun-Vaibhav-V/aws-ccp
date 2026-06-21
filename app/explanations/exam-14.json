@@ -1473,7 +1473,7 @@
       "correct": [
         "D"
       ],
-      "explanation": "Of the options given, the customer should obtain authorization from AWS before testing. (Note: under current AWS policy, customers may run penetration tests against eight permitted services without prior approval; tests outside that scope still require AWS authorization.)",
+      "explanation": "Among the listed options, D is the best answer. Note the current AWS policy, though: customers may run penetration tests against eight permitted services (e.g., EC2, RDS, CloudFront, Aurora, API Gateway, Lambda, Lightsail, Elastic Beanstalk) WITHOUT prior approval. Approval is only required for tests outside that permitted scope or for network stress / simulated DDoS testing.",
       "docLink": "https://aws.amazon.com/security/penetration-testing/"
     }
   ]

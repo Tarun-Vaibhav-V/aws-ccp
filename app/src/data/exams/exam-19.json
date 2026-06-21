@@ -689,10 +689,10 @@
         }
       ],
       "correct": [
-        "C"
+        "B"
       ],
-      "explanation": "",
-      "docLink": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html",
+      "explanation": "AWS Budgets lets you set budgets and receive alerts — including an alert when Reserved Instance utilization drops below a chosen threshold. It notifies you; it does not enforce hard resource limits or block spending, so it can't 'set resource limits to prevent overspending'.",
+      "docLink": "https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html",
       "isMulti": false,
       "domain": "Billing & Pricing",
       "id": "e19-q23"

@@ -742,12 +742,11 @@
         }
       ],
       "correct": [
-        "B",
-        "D"
+        "B"
       ],
-      "explanation": "",
-      "docLink": "https://aws.amazon.com/blogs/startups/large-scale-disaster-recovery-using-aws-regions/",
-      "isMulti": true,
+      "explanation": "For high availability plus recovery from a regional service interruption, run across two Availability Zones in one Region and use a DIFFERENT AWS Region as the disaster-recovery site. Keeping the DR site in the same Region wouldn't survive a regional outage, and running active across multiple Regions is more than this requirement asks.",
+      "docLink": "https://aws.amazon.com/disaster-recovery/",
+      "isMulti": false,
       "domain": "Cloud Technology & Services",
       "id": "e22-q25"
     },

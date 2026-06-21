@@ -2,11 +2,8 @@ import { annotate } from '../lib/glossary.js'
 import { buildReportMailto, REPORT_LINKEDIN } from '../lib/report.js'
 
 /**
- * Rich explanation block. Rather than fabricating per-question reasoning, it
- * grounds every statement in the factual glossary: it leads with WHY the
- * correct answer is right (from the correct option's concept + any source
- * explanation), then walks every option so the learner sees why the others
- * don't fit.
+ * Explanation block: the correct answer + a grounded "why it's correct"
+ * reason, plus the AWS reference and a report link.
  */
 
 /** Build the "why it's correct" reason from source text and/or the glossary. */
@@ -25,18 +22,14 @@ function whyCorrect(q) {
     })
     .filter(Boolean)
 
-  // Guaranteed fallback: every question gets a truthful reason. When no concept
-  // is matched, the correct option's own statement is the reason — and we point
-  // the learner to the per-option comparison to see why the others don't fit.
+  // 3) Guaranteed fallback so every question still gets a truthful reason.
   if (parts.length === 0) {
     const texts = (q.correct || [])
       .map((k) => q.options.find((o) => o.key === k)?.text)
       .filter(Boolean)
       .map((t) => `“${t.replace(/\.$/, '')}”`)
     if (texts.length) {
-      parts.push(
-        `${texts.join(' and ')} ${texts.length > 1 ? 'are' : 'is'} the choice that satisfies what the question asks. Compare each option below to see why the alternatives don’t fit this scenario.`
-      )
+      parts.push(`${texts.join(' and ')} ${texts.length > 1 ? 'are' : 'is'} the choice that best satisfies what the question asks.`)
     }
   }
   return parts.join('  ')
@@ -73,31 +66,6 @@ export default function Explanation({ q, sel = [], examTitle = '' }) {
           <strong>Why it’s correct:</strong> {why}
         </p>
       )}
-
-      {/* Per-option breakdown */}
-      <div className="ob-lab">Every option:</div>
-      <ul className="opt-breakdown">
-        {q.options.map((o) => {
-          const isCorrect = correct.includes(o.key)
-          const wasPicked = sel.includes(o.key)
-          const note = annotate(o.text)
-          return (
-            <li key={o.key} className={isCorrect ? 'ob-correct' : wasPicked ? 'ob-wrong' : ''}>
-              <span className="ob-key">{isCorrect ? '✓' : '✗'} {o.key}</span>
-              <span>
-                {note && <><strong>{note.term}</strong> — {note.def} </>}
-                <em>
-                  {isCorrect
-                    ? 'This directly answers the question.'
-                    : note
-                    ? 'Correct on its own, but it doesn’t address this scenario.'
-                    : 'Not the best fit for this question.'}
-                </em>
-              </span>
-            </li>
-          )
-        })}
-      </ul>
 
       {q.docLink && (
         <a href={q.docLink} target="_blank" rel="noreferrer" style={{ display: 'inline-block', marginTop: 8 }}>

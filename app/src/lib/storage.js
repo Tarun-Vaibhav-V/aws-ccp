@@ -1,28 +1,141 @@
 /**
- * localStorage-backed progress store. No backend required.
- * Tracks: exam attempts/scores, module completion, bookmarked questions.
+ * Progress store with two SEPARATE local caches:
+ *   - GUEST_KEY : progress for not-signed-in (guest) use. Survives login/logout.
+ *   - USER_KEY  : a local mirror of the signed-in account's Supabase data.
+ * The active cache depends on whether a user is signed in. Supabase is the
+ * source of truth for accounts; the mirror just makes reads instant + offline.
  */
-const KEY = 'aws-ccp-academy:v1'
+import { supabase } from './supabase.js'
 
-function read() {
+const GUEST_KEY = 'aws-ccp-academy:guest:v1'
+const USER_KEY = 'aws-ccp-academy:user:v1'
+const LEGACY_KEY = 'aws-ccp-academy:v1'
+
+/* ---------------- cloud sync state ---------------- */
+let _userId = null
+let _pushTimer = null
+
+/** Which local cache is active right now. */
+function activeKey() {
+  return _userId ? USER_KEY : GUEST_KEY
+}
+
+// One-time migration: fold any pre-split cache into the guest store.
+try {
+  const legacy = localStorage.getItem(LEGACY_KEY)
+  if (legacy && !localStorage.getItem(GUEST_KEY)) {
+    localStorage.setItem(GUEST_KEY, legacy)
+    localStorage.removeItem(LEGACY_KEY)
+  }
+} catch { /* ignore */ }
+
+function read(key = activeKey()) {
   try {
-    return JSON.parse(localStorage.getItem(KEY)) || {}
+    return JSON.parse(localStorage.getItem(key)) || {}
   } catch {
     return {}
   }
 }
 function write(data) {
   try {
-    localStorage.setItem(KEY, JSON.stringify(data))
+    localStorage.setItem(activeKey(), JSON.stringify(data))
   } catch {
     /* ignore quota / private mode */
   }
+  pushCloud()
 }
 
 const defaults = () => ({ attempts: [], modulesDone: [], bookmarks: [], wrong: [] })
 
 export function getState() {
   return { ...defaults(), ...read() }
+}
+
+function emitUpdated() {
+  window.dispatchEvent(new Event('ccp-progress-updated'))
+}
+
+function pushCloud() {
+  if (!supabase || !_userId) return
+  clearTimeout(_pushTimer)
+  _pushTimer = setTimeout(() => {
+    supabase
+      .from('user_progress')
+      .upsert({ user_id: _userId, data: getState(), updated_at: new Date().toISOString() })
+      .then(() => {}, () => {})
+  }, 800)
+}
+
+function dedupeAttempts(list) {
+  const seen = new Set()
+  const out = []
+  for (const a of list) {
+    const k = `${a.examId}|${a.at}|${a.percent}`
+    if (seen.has(k)) continue
+    seen.add(k)
+    out.push(a)
+  }
+  return out.sort((a, b) => (b.at || 0) - (a.at || 0)).slice(0, 200)
+}
+
+function mergeStates(a, b) {
+  const wrongMap = new Map()
+  for (const w of [...(a.wrong || []), ...(b.wrong || [])]) wrongMap.set(w.id, w)
+  return {
+    attempts: dedupeAttempts([...(a.attempts || []), ...(b.attempts || [])]),
+    modulesDone: [...new Set([...(a.modulesDone || []), ...(b.modulesDone || [])])],
+    bookmarks: [...new Set([...(a.bookmarks || []), ...(b.bookmarks || [])])],
+    wrong: [...wrongMap.values()].slice(0, 500),
+  }
+}
+
+/**
+ * Called by the auth layer when the signed-in user changes.
+ * - Logout: switch back to the (untouched) guest cache; drop the account mirror.
+ * - First signup (account has no cloud data): IMPORT the guest progress into the
+ *   new account's cloud (one-time seed). The guest cache is left intact.
+ * - Returning account (cloud already has data): load that account's own data
+ *   only — guest data is never merged in, so accounts stay isolated.
+ */
+export async function setSyncUser(userId, profile) {
+  _userId = userId || null
+
+  if (!userId) {
+    // Logout / guest: the active store reverts to GUEST_KEY (preserved). Drop
+    // the account mirror so a different account can't read it.
+    clearTimeout(_pushTimer)
+    try { localStorage.removeItem(USER_KEY) } catch { /* ignore */ }
+    emitUpdated()
+    return
+  }
+  if (!supabase) return
+
+  // Read the guest cache BEFORE switching the active store to the account.
+  const guestState = { ...defaults(), ...read(GUEST_KEY) }
+  try {
+    const { data } = await supabase
+      .from('user_progress')
+      .select('data')
+      .eq('user_id', userId)
+      .maybeSingle()
+    const cloud = (data && data.data) || {}
+    const cloudEmpty = !(
+      (cloud.attempts || []).length ||
+      (cloud.modulesDone || []).length ||
+      (cloud.wrong || []).length
+    )
+    // First signup -> seed the account from guest progress; otherwise load the
+    // account's own cloud data only (no merge).
+    const next = cloudEmpty ? { ...defaults(), ...guestState } : { ...defaults(), ...cloud }
+    const prof = { ...(cloud.profile || {}), ...(next.profile || {}), ...(profile || {}) }
+    if (prof.email || prof.name) next.profile = prof
+    // _userId is already set, so writes target USER_KEY (the account mirror).
+    localStorage.setItem(USER_KEY, JSON.stringify(next))
+    pushCloud() // persist imported progress / profile for new accounts
+    emitUpdated()
+  } catch {
+    /* offline / table missing — keep whatever is cached */
+  }
 }
 
 /** Record a completed exam attempt. */

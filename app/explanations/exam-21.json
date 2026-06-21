@@ -1,0 +1,7 @@
+{
+  "_note": "Reviewed corrections for Practice Exam 21 (more to come). Q11 C -> D.",
+  "id": "exam-21",
+  "questions": [
+    { "id": "e21-q11", "question": "A company wants to use Amazon Elastic Compute Cloud (Amazon EC2) to deploy a global commercial application. The deployment solution should be built with the highest redundancy and fault tolerance. Based on this situation, the Amazon EC2 instances should be deployed:", "correct": ["D"], "explanation": "The highest redundancy and fault tolerance for a global application comes from deploying across multiple Availability Zones in more than one AWS Region. Multiple AZs in a single Region survives an AZ failure but not a whole-Region outage.", "docLink": "https://aws.amazon.com/about-aws/global-infrastructure/" }
+  ]
+}

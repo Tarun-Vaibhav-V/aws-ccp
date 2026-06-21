@@ -1,0 +1,7 @@
+{
+  "_note": "Reviewed corrections for Practice Exam 22 (more to come). Q25 B,D -> B (single answer).",
+  "id": "exam-22",
+  "questions": [
+    { "id": "e22-q25", "question": "A company wants to set up a highly available workload in AWS with a disaster recovery plan that will allow the company to recover in case of a regional service interruption. Which configuration will meet these requirements?", "correct": ["B"], "explanation": "For high availability plus recovery from a regional service interruption, run across two Availability Zones in one Region and use a DIFFERENT AWS Region as the disaster-recovery site. Keeping the DR site in the same Region wouldn't survive a regional outage, and running active across multiple Regions is more than this requirement asks.", "docLink": "https://aws.amazon.com/disaster-recovery/" }
+  ]
+}

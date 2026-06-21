@@ -353,7 +353,7 @@
         },
         {
           "key": "B",
-          "text": "AWS Server Migration Service."
+          "text": "AWS Application Migration Service (AWS MGN)."
         },
         {
           "key": "C",
@@ -367,8 +367,8 @@
       "correct": [
         "B"
       ],
-      "explanation": "AWS Server Migration Service (SMS) migrates large numbers of on-premises server workloads to AWS. DMS migrates databases, Application Discovery Service inventories, and 'File Transfer Acceleration' is not the workload-migration tool.",
-      "docLink": "https://aws.amazon.com/server-migration-service/",
+      "explanation": "AWS Application Migration Service (AWS MGN) is the primary lift-and-shift service for migrating large numbers of on-premises servers and workloads to AWS. It replaced the now-retired AWS Server Migration Service (SMS). AWS DMS migrates databases, and Application Discovery Service only inventories on-premises resources before a migration.",
+      "docLink": "https://aws.amazon.com/application-migration-service/",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
       "id": "e6-q12"
@@ -441,11 +441,11 @@
       "options": [
         {
           "key": "A",
-          "text": "CloudEndure Disaster Recovery."
+          "text": "AWS Elastic Disaster Recovery (AWS DRS)."
         },
         {
           "key": "B",
-          "text": "CloudEndure Migration."
+          "text": "AWS Application Migration Service (AWS MGN)."
         },
         {
           "key": "C",
@@ -459,8 +459,8 @@
       "correct": [
         "A"
       ],
-      "explanation": "CloudEndure Disaster Recovery continuously replicates your environment to another Region so a standby can be available in minutes after an outage. CloudEndure Migration is for migration, AWS Backup centralizes backups, and Glue is ETL.",
-      "docLink": "https://aws.amazon.com/cloudendure-disaster-recovery/",
+      "explanation": "AWS Elastic Disaster Recovery (AWS DRS) continuously replicates your servers to another Region and lets you launch recovery within minutes, meeting a low-RTO disaster-recovery requirement. AWS DRS is the renamed successor to CloudEndure Disaster Recovery. AWS Backup protects data but does not provide minutes-fast standby failover.",
+      "docLink": "https://aws.amazon.com/disaster-recovery/",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
       "id": "e6-q15"

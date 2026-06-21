@@ -1,0 +1,8 @@
+{
+  "_note": "Reviewed corrections for Practice Exam 17 (more to come). Q4 C->B, Q28 A->B.",
+  "id": "exam-17",
+  "questions": [
+    { "id": "e17-q4", "question": "Which service should be used to estimate the costs of running a new project on AWS?", "correct": ["B"], "explanation": "To estimate the cost of a NEW project before you build it, use the AWS Pricing Calculator (formerly the Simple Monthly Calculator). Cost Explorer analyzes your EXISTING usage, the TCO Calculator compares on-premises vs AWS, and Budgets only alerts on spend.", "docLink": "https://calculator.aws/" },
+    { "id": "e17-q28", "question": "Which service would provide network connectivity in a hybrid architecture that includes the AWS Cloud?", "correct": ["B"], "explanation": "AWS Direct Connect provides a dedicated private network link between an on-premises data center and AWS — the connectivity backbone of a hybrid architecture. Amazon VPC is the cloud network itself, not the hybrid link.", "docLink": "https://aws.amazon.com/directconnect/" }
+  ]
+}

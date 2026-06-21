@@ -331,10 +331,10 @@
         }
       ],
       "correct": [
-        "C"
+        "D"
       ],
-      "explanation": "",
-      "docLink": "https://jayendrapatil.com/aws-high-availability-fault-tolerance-architecture-certification/",
+      "explanation": "The highest redundancy and fault tolerance for a global application comes from deploying across multiple Availability Zones in more than one AWS Region. Multiple AZs in a single Region survives an AZ failure but not a whole-Region outage.",
+      "docLink": "https://aws.amazon.com/about-aws/global-infrastructure/",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
       "id": "e21-q11"

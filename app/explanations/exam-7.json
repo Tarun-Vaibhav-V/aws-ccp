@@ -1422,7 +1422,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "The AWS Service Health Dashboard shows the current operational status of AWS services across Regions. (The URL in the question was omitted, but the dashboard is the public service-status page.)",
+      "explanation": "The AWS Health Dashboard (the public Service Health page) shows the real-time operational status of AWS services across Regions. The billing, cost, and security dashboards serve different purposes.",
       "docLink": "https://health.aws.amazon.com/health/status",
       "isMulti": false,
       "domain": "Billing & Pricing",
@@ -1519,7 +1519,7 @@
       "correct": [
         "C"
       ],
-      "explanation": "Applying cost allocation tags lets the company categorize and track AWS spending by project and department. The Pricing Calculator estimates future cost, Aurora is a database, and the Price List API returns price data, not departmental tracking.",
+      "explanation": "Cost allocation tags let you label resources (e.g., by project or department) so you can categorize and track AWS spend per group in Cost Explorer and the Cost & Usage Report. The Pricing Calculator only estimates future costs, and the Price List API just returns service prices — neither attributes your existing spend.",
       "docLink": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html",
       "isMulti": false,
       "domain": "Billing & Pricing",

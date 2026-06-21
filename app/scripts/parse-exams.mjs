@@ -213,7 +213,9 @@ async function main() {
             }
           }
         })
-        if (unmatched > 0 || ovr.questions.length !== questions.length) {
+        // Warn only when a file that looks meant-to-be-complete misaligns
+        // (small correction-only files are expected to match just a few).
+        if (unmatched > 0 && ovr.questions.length >= questions.length * 0.5) {
           console.warn(`    ⚠ exam-${num}: override has ${ovr.questions.length} q, source has ${questions.length}; ${unmatched} source question(s) had no override match (using glossary fallback).`)
         }
       } else {

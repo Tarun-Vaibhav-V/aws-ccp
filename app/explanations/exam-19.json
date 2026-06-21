@@ -1,0 +1,7 @@
+{
+  "_note": "Reviewed corrections for Practice Exam 19 (more to come). Q23 C -> B.",
+  "id": "exam-19",
+  "questions": [
+    { "id": "e19-q23", "question": "AWS Budgets can be used to:", "correct": ["B"], "explanation": "AWS Budgets lets you set budgets and receive alerts — including an alert when Reserved Instance utilization drops below a chosen threshold. It notifies you; it does not enforce hard resource limits or block spending, so it can't 'set resource limits to prevent overspending'.", "docLink": "https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html" }
+  ]
+}

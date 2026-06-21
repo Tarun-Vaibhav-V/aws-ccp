@@ -489,7 +489,7 @@
         "C",
         "D"
       ],
-      "explanation": "Tools that assist with cost estimation include Cost allocation tags (B), the AWS Simple Monthly Calculator (C), and the TCO Calculator (D). A detailed billing report shows actual costs, and 'Cost Eliminator' is not a real tool. (Note: this question asks for THREE answers; the Simple Monthly Calculator and TCO Calculator are now part of the AWS Pricing Calculator.)",
+      "explanation": "Current AWS cost tools: the AWS Pricing Calculator estimates the cost of a planned architecture (it replaced the retired Simple Monthly Calculator and the standalone TCO Calculator), AWS Cost Explorer analyzes and forecasts your actual spend, and cost allocation tags attribute costs to projects/departments.",
       "docLink": "https://calculator.aws/",
       "isMulti": true,
       "domain": "Billing & Pricing",

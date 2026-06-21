@@ -211,8 +211,8 @@ layout: exam
 1. Which AWS tools assist with estimating costs? (Select three.)
     - A. Detailed billing report
     - B. Cost allocation tags
-    - C. AWS Simple Monthly Calculator
-    - D. AWS Total Cost of Ownership (TCO) Calculator
+    - C. AWS Pricing Calculator
+    - D. AWS Cost Explorer
     - E. Cost Eliminator
 
     <details markdown=1><summary markdown="span">Answer</summary>

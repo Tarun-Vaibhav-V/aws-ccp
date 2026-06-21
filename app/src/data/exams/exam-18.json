@@ -596,11 +596,11 @@
         }
       ],
       "correct": [
-        "C",
+        "B",
         "D"
       ],
-      "explanation": "",
-      "docLink": "",
+      "explanation": "Two immediate benefits are replacing capital expense with variable, pay-as-you-go expense (B) and increased agility — provisioning resources in minutes (D). The cloud reduces IT heavy lifting rather than increasing staff, and the customer (not AWS) is responsible for security IN the cloud.",
+      "docLink": "https://aws.amazon.com/what-is-cloud-computing/",
       "isMulti": true,
       "domain": "Cloud Concepts",
       "id": "e18-q20"

@@ -476,7 +476,7 @@ layout: exam
       Correct answer: C, D
     </details>
 
-47. What can you access by visiting the URL: <http://status.aws.amazon.com>?
+47. What can you access by visiting the URL https://health.aws.amazon.com/health/status ?
     - A. AWS Billing Dashboard.
     - B. AWS Cost Dashboard.
     - C. AWS Service Health Dashboard.
@@ -511,7 +511,7 @@ layout: exam
 50. A company is migrating production workloads to AWS, and they are concerned about cost management across different departments. Which option should the company implement to categorize and track AWS spending?
     - A. Use the AWS Pricing Calculator service to monitor the costs incurred by each department.
     - B. Use Amazon Aurora to forecast AWS spending based on usage.
-    - C. Apply cost allocation tags to segment AWS costs by different e projects and departments.
+    - C. Apply cost allocation tags to segment AWS costs by different projects and departments.
     - D. Configure AWS Price List API to receive billing updates for each department automatically.
 
     <details markdown=1><summary markdown='span'>Answer</summary>

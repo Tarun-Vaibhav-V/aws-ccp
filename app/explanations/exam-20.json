@@ -1,0 +1,7 @@
+{
+  "_note": "Reviewed corrections for Practice Exam 20 (more to come). Q34 B -> A.",
+  "id": "exam-20",
+  "questions": [
+    { "id": "e20-q34", "question": "Who is responsible for patching the guest operating system for Amazon RDS?", "correct": ["A"], "explanation": "Amazon RDS is a managed service, so AWS (the RDS product team) patches the underlying guest operating system and database engine. With RDS the customer does NOT patch the OS — a key difference from running a database yourself on Amazon EC2.", "docLink": "https://aws.amazon.com/compliance/shared-responsibility-model/" }
+  ]
+}

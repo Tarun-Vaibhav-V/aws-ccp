@@ -71,7 +71,10 @@ export default function Quiz() {
     setAnswers((prev) => {
       const cur = prev[q.id] || []
       if (q.isMulti) {
-        return { ...prev, [q.id]: cur.includes(key) ? cur.filter((k) => k !== key) : [...cur, key] }
+        if (cur.includes(key)) return { ...prev, [q.id]: cur.filter((k) => k !== key) }
+        // Cap selections at the number of correct answers (e.g., "Choose TWO").
+        if (cur.length >= q.correct.length) return prev
+        return { ...prev, [q.id]: [...cur, key] }
       }
       return { ...prev, [q.id]: [key] }
     })
@@ -194,7 +197,7 @@ export default function Quiz() {
 
       <div className="question-card">
         <div className="row" style={{ justifyContent: 'space-between' }}>
-          <span className="qno">Q{idx + 1}{q.isMulti ? ' · choose all that apply' : ''}</span>
+          <span className="qno">Q{idx + 1}{q.isMulti ? ` · select ${q.correct.length}` : ''}</span>
           <span className="row" style={{ gap: 6 }}>
             <a className="tag" href={buildReportMailto(q, exam.title)} title="Report an issue with this question" style={{ textDecoration: 'none' }}>⚑ Report</a>
             <button className="tag" style={{ cursor: 'pointer', background: flags[q.id] ? 'var(--yellow)' : 'transparent', color: flags[q.id] ? '#000' : 'var(--ink)' }} onClick={() => setFlags((f) => ({ ...f, [q.id]: !f[q.id] }))}>
@@ -237,7 +240,12 @@ export default function Quiz() {
 
       {/* question palette */}
       <div className="box flat" style={{ marginTop: 22, border: 'var(--border)' }}>
-        <div className="qmeta" style={{ marginBottom: 8 }}>Jump to question · ★ flagged · ■ answered</div>
+        <div className="palette-legend">
+          <span>Jump to question</span>
+          <span className="lg"><span className="sw sw-ans" /> answered</span>
+          <span className="lg"><span className="sw sw-flag" /> flagged</span>
+          <span className="lg"><span className="sw sw-cur" /> current</span>
+        </div>
         <div className="qpalette">
           {exam.questions.map((qq, i) => {
             const a = (answers[qq.id] || []).length > 0

@@ -113,10 +113,10 @@
         }
       ],
       "correct": [
-        "C"
+        "B"
       ],
-      "explanation": "",
-      "docLink": "https://aws.amazon.com/premiumsupport/knowledge-center/estimating-aws-resource-costs/",
+      "explanation": "To estimate the cost of a NEW project before you build it, use the AWS Pricing Calculator (formerly the Simple Monthly Calculator). Cost Explorer analyzes your EXISTING usage, the TCO Calculator compares on-premises vs AWS, and Budgets only alerts on spend.",
+      "docLink": "https://calculator.aws/",
       "isMulti": false,
       "domain": "Billing & Pricing",
       "id": "e17-q4"
@@ -844,10 +844,10 @@
         }
       ],
       "correct": [
-        "A"
+        "B"
       ],
-      "explanation": "",
-      "docLink": "https://aws.amazon.com/blogs/publicsector/aws-networking-capabilities-gives-you-choices-for-hybrid-cloud-connectivity-but-which-service-works-best-for-your-use-case/",
+      "explanation": "AWS Direct Connect provides a dedicated private network link between an on-premises data center and AWS — the connectivity backbone of a hybrid architecture. Amazon VPC is the cloud network itself, not the hybrid link.",
+      "docLink": "https://aws.amazon.com/directconnect/",
       "isMulti": false,
       "domain": "Cloud Technology & Services",
       "id": "e17-q28"

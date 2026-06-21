@@ -120,7 +120,7 @@ layout: exam
 
 12. You need to migrate a large number of on-premises workloads to AWS. Which AWS service is the most appropriate?
     - A. AWS File Transfer Acceleration.
-    - B. AWS Server Migration Service.
+    - B. AWS Application Migration Service (AWS MGN).
     - C. AWS Database Migration Service.
     - D. AWS Application Discovery Service.
 
@@ -150,8 +150,8 @@ layout: exam
     </details>
 
 15. A company is hosting business critical workloads in an AWS Region. To protect against data loss and ensure business continuity, a mirror image of the current AWS environment should be created in another AWS Region. Company policy requires that the standby environment must be available in minutes in case of an outage in the primary AWS Region. Which AWS service can be used to meet these requirements?
-    - A. CloudEndure Disaster Recovery.
-    - B. CloudEndure Migration.
+    - A. AWS Elastic Disaster Recovery (AWS DRS).
+    - B. AWS Application Migration Service (AWS MGN).
     - C. AWS Backup.
     - D. AWS Glue.
 

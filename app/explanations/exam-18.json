@@ -1,0 +1,7 @@
+{
+  "_note": "Reviewed corrections for Practice Exam 18 (more to come). Q20 C,D -> B,D.",
+  "id": "exam-18",
+  "questions": [
+    { "id": "e18-q20", "question": "What are the immediate benefits of using the AWS Cloud? (Choose two.)", "correct": ["B", "D"], "explanation": "Two immediate benefits are replacing capital expense with variable, pay-as-you-go expense (B) and increased agility — provisioning resources in minutes (D). The cloud reduces IT heavy lifting rather than increasing staff, and the customer (not AWS) is responsible for security IN the cloud.", "docLink": "https://aws.amazon.com/what-is-cloud-computing/" }
+  ]
+}
