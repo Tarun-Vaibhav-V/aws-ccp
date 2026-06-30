@@ -31,18 +31,40 @@ function resolveExam(id) {
 const sameSet = (a = [], b = []) => a.length === b.length && [...a].sort().join() === [...b].sort().join()
 const fmt = (s) => `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`
 
+// In-progress session persistence (per route) so navigating away / switching
+// tabs / reloading resumes exactly where you left off.
+const skey = (routeId) => `ccp-quiz-session:${routeId}`
+function loadSession(routeId) {
+  try {
+    const s = JSON.parse(localStorage.getItem(skey(routeId)))
+    if (s && s.exam && s.phase === 'active') return s
+  } catch { /* ignore */ }
+  return null
+}
+function clearSession(routeId) {
+  try { localStorage.removeItem(skey(routeId)) } catch { /* ignore */ }
+}
+
 export default function Quiz() {
   const { id } = useParams()
   const [params] = useSearchParams()
-  const mode = params.get('mode') === 'exam' ? 'exam' : id === 'mixed' || id === 'retry' ? 'exam' : 'practice'
 
-  const exam = useMemo(() => resolveExam(id), [id])
-  const [phase, setPhase] = useState('intro')
-  const [idx, setIdx] = useState(0)
-  const [answers, setAnswers] = useState({})       // qid -> [keys]
-  const [flags, setFlags] = useState({})           // qid -> bool
-  const [checked, setChecked] = useState({})       // qid -> bool (practice reveal)
-  const [timeLeft, setTimeLeft] = useState(EXAM_SECONDS)
+  // Restore an in-progress session for this route, if one exists.
+  const saved = useMemo(() => loadSession(id), [id])
+  const mode = saved
+    ? saved.mode
+    : params.get('mode') === 'exam' ? 'exam' : id === 'mixed' || id === 'retry' ? 'exam' : 'practice'
+  const exam = useMemo(() => (saved ? saved.exam : resolveExam(id)), [id, saved])
+
+  const [phase, setPhase] = useState(saved ? 'active' : 'intro')
+  const [idx, setIdx] = useState(saved ? saved.idx || 0 : 0)
+  const [answers, setAnswers] = useState(saved ? saved.answers || {} : {})
+  const [flags, setFlags] = useState(saved ? saved.flags || {} : {})
+  const [checked, setChecked] = useState(saved ? saved.checked || {} : {})
+  const [deadline, setDeadline] = useState(saved ? saved.deadline || null : null)
+  const [timeLeft, setTimeLeft] = useState(
+    saved && saved.deadline ? Math.max(0, Math.round((saved.deadline - Date.now()) / 1000)) : EXAM_SECONDS
+  )
   const [result, setResult] = useState(null)
   const timerRef = useRef(null)
 
@@ -51,18 +73,38 @@ export default function Quiz() {
     if (exam) recordVisit({ type: 'exam', id, title: exam.title })
   }, [exam, id])
 
-  // timer for exam mode
+  // persist the live session (not on every timer tick — the deadline handles time)
   useEffect(() => {
-    if (phase !== 'active' || mode !== 'exam') return
-    timerRef.current = setInterval(() => {
-      setTimeLeft((t) => {
-        if (t <= 1) { clearInterval(timerRef.current); submit(); return 0 }
-        return t - 1
-      })
-    }, 1000)
+    if (phase === 'active' && exam) {
+      try {
+        localStorage.setItem(skey(id), JSON.stringify({ routeId: id, mode, phase, idx, answers, flags, checked, deadline, exam }))
+      } catch { /* ignore quota */ }
+    }
+  }, [phase, idx, answers, flags, checked, deadline, id, mode, exam])
+
+  // deadline-based timer for exam mode (accurate across reloads / tab switches)
+  useEffect(() => {
+    if (phase !== 'active' || mode !== 'exam' || !deadline) return
+    const tick = () => {
+      const rem = Math.max(0, Math.round((deadline - Date.now()) / 1000))
+      setTimeLeft(rem)
+      if (rem <= 0) { clearInterval(timerRef.current); submit() }
+    }
+    tick()
+    timerRef.current = setInterval(tick, 1000)
     return () => clearInterval(timerRef.current)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, mode])
+  }, [phase, mode, deadline])
+
+  function start() {
+    setPhase('active')
+    if (mode === 'exam' && !deadline) setDeadline(Date.now() + EXAM_SECONDS * 1000)
+  }
+  function restart() {
+    clearSession(id)
+    setIdx(0); setAnswers({}); setChecked({}); setFlags({}); setDeadline(null); setTimeLeft(EXAM_SECONDS); setResult(null)
+    setPhase('intro')
+  }
 
   if (!exam) {
     return <div className="empty">No questions here yet. <Link to="/exams">Back to mock tests</Link></div>
@@ -90,6 +132,7 @@ export default function Quiz() {
 
   function submit() {
     clearInterval(timerRef.current)
+    clearSession(id)
     let correctCount = 0
     const wrongQs = []
     const review = exam.questions.map((qq) => {
@@ -128,8 +171,8 @@ export default function Quiz() {
               : <><li>Untimed</li><li>Instant feedback + explanation after each question</li></>}
             <li>Flag questions to revisit before submitting</li>
           </ul>
-          <button className="btn primary" style={{ marginTop: 16 }} onClick={() => setPhase('active')}>
-            {mode === 'exam' ? '▶ Start timed exam' : '▶ Start practicing'}
+          <button className="btn primary" style={{ marginTop: 16 }} onClick={start}>
+            {mode === 'exam' ? 'Start timed exam' : 'Start practicing'}
           </button>
         </div>
       </div>
@@ -153,7 +196,7 @@ export default function Quiz() {
           </div>
           <div className="row" style={{ marginTop: 18 }}>
             <Link className="btn" to="/exams">← All tests</Link>
-            <button className="btn dark" onClick={() => { setPhase('intro'); setIdx(0); setAnswers({}); setChecked({}); setFlags({}); setTimeLeft(EXAM_SECONDS); setResult(null) }}>Retake</button>
+            <button className="btn dark" onClick={restart}>Retake</button>
           </div>
         </div>
 
@@ -195,7 +238,8 @@ export default function Quiz() {
           <strong style={{ fontFamily: 'var(--font-display)' }}>Question {idx + 1} / {exam.questions.length}</strong>
         </div>
         <div className="row">
-          {mode === 'exam' && <span className={`quiz-timer ${timeLeft < 300 ? 'warn' : ''}`}>⏱ {fmt(timeLeft)}</span>}
+          {mode === 'exam' && <span className={`quiz-timer ${timeLeft < 300 ? 'warn' : ''}`}>{fmt(timeLeft)}</span>}
+          <button className="btn sm" onClick={restart} title="Start this test over from the beginning">Restart</button>
           <button className="btn dark sm" onClick={submit}>Submit ({answeredCount}/{exam.questions.length})</button>
         </div>
       </div>

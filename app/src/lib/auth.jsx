@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
 import { supabase, isCloudEnabled } from './supabase.js'
 import { setSyncUser } from './storage.js'
 
@@ -7,6 +7,7 @@ const AuthContext = createContext(null)
 export function AuthProvider({ children }) {
   const [session, setSession] = useState(null)
   const [ready, setReady] = useState(false)
+  const lastUidRef = useRef('__init__')
 
   useEffect(() => {
     if (!supabase) {
@@ -23,8 +24,14 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     const u = session?.user
+    const uid = u?.id || null
+    // Only resync when the actual user changes. Token refreshes (e.g. on tab
+    // focus) fire with the same user — ignoring them avoids remounting the app
+    // and interrupting an in-progress test.
+    if (lastUidRef.current === uid) return
+    lastUidRef.current = uid
     setSyncUser(
-      u?.id || null,
+      uid,
       u ? { email: u.email, name: u.user_metadata?.full_name || u.user_metadata?.name || '' } : null
     )
   }, [session])
